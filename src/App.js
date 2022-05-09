@@ -17,6 +17,10 @@ export default class App extends React.Component {
             <img src="tablet.png" alt="tablet" /> {/* https://www.flaticon.com/free-icons/tablet */}
             <img src="laptop.png" alt="laptop" /> {/* https://www.flaticon.com/free-icons/laptop */}
           </div>
+          <div className="container">
+            <img src="plant.png" alt="plant" />
+            <img src="sticker.png" alt="sticker" />
+          </div>
         </body>
       </>
     )
