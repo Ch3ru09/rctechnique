@@ -1,8 +1,17 @@
 import React from "react"
+import Lobby from "./Lobby.js"
+import "./app.css"
 
 export default class App extends React.Component {
-  constructor(props) {
-    super(props)
+  constructor () {
+    super()
+    this.state = {
+      page: "Lobby"
+    }
+  }
+
+  componentDidMount() {
+    Lobby.log("e")
   }
 
   render () {
@@ -12,16 +21,11 @@ export default class App extends React.Component {
           RC Technique
         </header>
         <body>
-          <div className="container">
-            <img src="smartphone.png" alt="phone" /> {/* https://www.flaticon.com/free-icons/phone */}
-            <img src="tablet.png" alt="tablet" /> {/* https://www.flaticon.com/free-icons/tablet */}
-            <img src="laptop.png" alt="laptop" /> {/* https://www.flaticon.com/free-icons/laptop */}
-          </div>
-          <div className="container">
-            <img src="plant.png" alt="plant" />
-            <img src="sticker.png" alt="sticker" />
-          </div>
+          <Lobby page={this.state.page} />
         </body>
+        <footer>
+          
+        </footer>
       </>
     )
   }
