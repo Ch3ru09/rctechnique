@@ -1,25 +1,24 @@
-import logo from './logo.svg';
-import './App.css';
+import React from "react"
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+export default class App extends React.Component {
+  constructor(props) {
+    super(props)
+  }
+
+  render () {
+    return (
+      <>
+        <header>
+          RC Technique
+        </header>
+        <body>
+          <div className="container">
+            <img src="smartphone.png" alt="phone" /> {/* https://www.flaticon.com/free-icons/phone */}
+            <img src="tablet.png" alt="tablet" /> {/* https://www.flaticon.com/free-icons/tablet */}
+            <img src="laptop.png" alt="laptop" /> {/* https://www.flaticon.com/free-icons/laptop */}
+          </div>
+        </body>
+      </>
+    )
+  }
 }
-
-export default App;
