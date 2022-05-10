@@ -1,3 +1,25 @@
+:root {
+  --bg-primary-200: #b5f570;
+  --bg-primary-400: #88ef1a;
+  --bg-dark-700: #424874;
+}
+
+.bg-primary-200 {
+  background-color: var(--bg-primary-200);
+}
+
+.bg-primary-400 {
+  background-color: var(--bg-primary-400);
+}
+
+.bg-dark-700 {
+  background-color: var(--bg-dark-700);
+}
+
+* {
+  margin: 0;
+}
+
 .container > img {
-  max-width: 10%;
+  max-width: 25%;
 }
