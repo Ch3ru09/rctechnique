@@ -21,6 +21,7 @@ export default class App extends React.Component {
         this.setState({page: <Tablets />})
         break
       default:
+        this.setState({page: <Lobby changePage={this.changePage.bind(this)} />})
         break
     }
   }
@@ -29,6 +30,10 @@ export default class App extends React.Component {
     return (
       <>
         <header>
+          <img 
+            src={process.env.PUBLIC_URL + "260795084017212.png"} 
+            alt="logo" 
+            onClick={() => {this.changePage()}} />
           RC Technique
         </header>
         <main>
