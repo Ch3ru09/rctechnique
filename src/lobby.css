@@ -1,0 +1,25 @@
+.title-container {
+  text-align: center;
+}
+
+.company-title {
+  font-size: 2rem;
+  display: inline-block;
+  text-align: center;
+}
+
+.company-title::before,
+.company-title::after {
+  font-size: .75rem;
+  display: block;
+  background-color: red;
+}
+
+.company-title::before {
+  content: 'Centre de réparation';
+}
+
+.company-title::after {
+  content: 'Repair center';
+
+}

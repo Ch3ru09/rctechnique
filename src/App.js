@@ -2,6 +2,7 @@ import React from "react"
 import Lobby from "./Lobby.js"
 import Phones from "./Phones.js"
 import Tablets from "./Tablets.js"
+import Laptops from "./Laptops.js"
 import "./app.css"
 
 export default class App extends React.Component {
@@ -20,6 +21,9 @@ export default class App extends React.Component {
       case "tablets":
         this.setState({page: <Tablets />})
         break
+      case "laptops":
+        this.setState({page: <Laptops />})
+        break
       default:
         this.setState({page: <Lobby changePage={this.changePage.bind(this)} />})
         break
@@ -33,8 +37,8 @@ export default class App extends React.Component {
           <img 
             src={process.env.PUBLIC_URL + "260795084017212.png"} 
             alt="logo" 
+            className="logo-img"
             onClick={() => {this.changePage()}} />
-          RC Technique
         </header>
         <main>
           {this.state.page}

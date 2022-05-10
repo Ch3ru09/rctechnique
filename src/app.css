@@ -38,11 +38,29 @@ p {
 /*
   ===+ ======== +=== 
 */
+.logo-img {
+  width: 5%;
+}
+
+.container {
+  padding: 2em 1em;
+  overflow:hidden
+}
 
 img:hover {
   cursor: pointer;
 }
 
-.container > img {
+@keyframes show-icons {
+  0% {
+    transform: translateY(-200%);
+  }
+  100% {
+    transform: translateY(0%);
+  }
+}
+
+.container img {
   max-width: 25%;
+  animation: show-icons 1000ms ease 0ms 1;
 }
