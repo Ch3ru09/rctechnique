@@ -1,17 +1,28 @@
 import React from "react"
 import Lobby from "./Lobby.js"
+import Phones from "./Phones.js"
+import Tablets from "./Tablets.js"
 import "./app.css"
 
 export default class App extends React.Component {
   constructor () {
     super()
     this.state = {
-      page: "Lobby"
+      page: <Lobby changePage={this.changePage.bind(this)} />
     }
   }
 
-  componentDidMount() {
-    Lobby.log("e")
+  changePage(page) {
+    switch (page) {
+      case "phones":
+        this.setState({page: <Phones />})
+        break
+      case "tablets":
+        this.setState({page: <Tablets />})
+        break
+      default:
+        break
+    }
   }
 
   render () {
@@ -20,9 +31,9 @@ export default class App extends React.Component {
         <header>
           RC Technique
         </header>
-        <body>
-          <Lobby page={this.state.page} />
-        </body>
+        <main>
+          {this.state.page}
+        </main>
         <footer>
           
         </footer>
