@@ -1,8 +1,10 @@
 import React from "react"
-import Lobby from "./Lobby.js"
-import Phones from "./Phones.js"
+import Lobby from "./Lobby.jsx"
+import Phones from "./Phones.jsx"
 import Tablets from "./Tablets.js"
-import Laptops from "./Laptops.js"
+import Laptops from "./Laptops.jsx"
+import Plants from "./Plants.jsx"
+import Stickers from "./Stickers.jsx"
 import "./app.css"
 
 export default class App extends React.Component {
@@ -23,6 +25,12 @@ export default class App extends React.Component {
         break
       case "laptops":
         this.setState({page: <Laptops />})
+        break
+      case "plants":
+        this.setState({page: <Plants />})
+        break
+      case "stickers":
+        this.setState({page: <Stickers />})
         break
       default:
         this.setState({page: <Lobby changePage={this.changePage.bind(this)} />})

@@ -1,7 +1,12 @@
 :root {
+  --bg-white-100: #eeeeee;
   --bg-primary-200: #b5f570;
   --bg-primary-400: #88ef1a;
+  --bg-secondary-400: #DB3A34;
   --bg-dark-700: #424874;
+  --bg-dark-800: #333333;
+
+  --responsive-width-1: 60em;
 }
 
 .bg-primary-200 {
@@ -38,29 +43,71 @@ p {
 /*
   ===+ ======== +=== 
 */
+
+body {
+  background-color: var(--bg-white-100);
+}
+
 .logo-img {
-  width: 5%;
+  height: 10vh;
 }
 
 .container {
   padding: 2em 1em;
-  overflow:hidden
+  overflow: hidden;
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  width: 100%;
+  flex-direction: column;
 }
 
 img:hover {
   cursor: pointer;
 }
 
-@keyframes show-icons {
-  0% {
-    transform: translateY(-200%);
+@media (min-width: 60rem) {
+  @keyframes change-icon-position {
+    0% {transform: translateY(0%);}
+    100% {transform: translateY(-200%);}
   }
-  100% {
-    transform: translateY(0%);
+
+  @keyframes show-icons {
+    0% {
+      transform: translateY(-200%);
+    }
+    100% {
+      transform: translateY(0%);
+    }
+  }
+  .container {
+    justify-content: space-evenly;
+    flex-wrap: nowrap;
+    flex-direction: row;
+  }
+  .container > * {
+    flex-basis: auto;
   }
 }
 
+@keyframes change-icon-position {
+    0% {transform: translateX(0%);}
+    100% {transform: translateX(-200%);}
+  }
+
+  @keyframes show-icons {
+    0% {
+      transform: translateX(-200%);
+    }
+    100% {
+      transform: translateX(0%);
+    }
+  }
+
 .container img {
-  max-width: 25%;
-  animation: show-icons 1000ms ease 0ms 1;
+  aspect-ratio: 1/1;
+  max-width: 15em;
+  animation: 
+    change-icon-position 0ms linear 0ms 1 forwards,
+    show-icons 1000ms ease calc(100ms + (1000ms*var(--order)/var(--times))) 1 forwards;
 }
