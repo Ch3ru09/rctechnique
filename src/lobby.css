@@ -7,13 +7,14 @@
   display: inline-block;
   text-align: center;
   position: relative;
-  padding: 1rem;
+  padding: 1.5rem;
   transform: scale(0);
   overflow: hidden;
-  animation: open-title var(--duration) ease 100ms forwards;
+  animation: open-title var(--animation-duration) ease 100ms forwards;
   background-color: var(--bg-white-100);
-  --duration: 500ms;
   white-space: nowrap;
+  color: #fff;
+  text-shadow: 10px 0px 20px red, 0 0px 20px red, 0px 0px 5px red;
 }
 
 @keyframes open-title {
@@ -36,13 +37,14 @@
   transform: translate(-50%);
   white-space: nowrap;
   color: rgb(207, 165, 0);
+  text-shadow: none;
 }
 
 .company-title::before {
   content: 'Centre de réparation';
   top: 25%;
   opacity: 0;
-  animation: slide-before var(--duration) ease 600ms 1 forwards;
+  animation: slide-before var(--animation-duration) ease 600ms 1 forwards;
 }
 
 @keyframes slide-before {
@@ -51,7 +53,7 @@
     opacity: 0;
   }
   100% {
-    top: 0%;
+    top: 0;
     opacity: 1;
   }
 }
@@ -60,7 +62,7 @@
   content: 'Repair center';
   bottom: 25%;
   opacity: 0;
-  animation: slide-after var(--duration) ease 600ms 1 forwards;
+  animation: slide-after var(--animation-duration) ease 600ms 1 forwards;
 }
 
 @keyframes slide-after {
@@ -78,16 +80,7 @@
   display: inline-block;
 }
 
-.split {
-  display: flex;
-  flex-direction: column;
-}
-
-.split > * + * {
-  margin-top: 1em;
-}
-
-@media (min-width: 60rem) {
+@media (min-width: 30em) {
   .split {
     flex-direction: row;
   }
@@ -97,7 +90,21 @@
   }
 }
 
-.icon-container > div {
-  display: block;
-  width: 100px;
+.split {
+  display: flex;
+  flex-direction: column;
+}
+
+.split > * + * {
+  margin-top: 1em;
+}
+
+.icon-box > div {
+  max-width: 200px;
+  margin: 0;
+}
+
+.text {
+  position: absolute;
+  
 }
