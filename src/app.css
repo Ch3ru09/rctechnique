@@ -64,10 +64,6 @@ body {
   flex-direction: column;
 }
 
-img:hover {
-  cursor: pointer;
-}
-
 @media (min-width: 47rem) {
   @keyframes change-icon-position {
     0% {
@@ -96,32 +92,28 @@ img:hover {
     flex-basis: auto;
   }
 }
-
-@keyframes change-icon-position {
-  0% {transform: translateX(0%);}
-  100% {transform: translateX(-200%);}
-}
-
-@keyframes show-icons {
-  0% {
-    transform: translateX(-200%);
+@media (max-width: 47rem) {  
+  @keyframes change-icon-position {
+    0% {transform: translateX(0%);}
+    100% {transform: translateX(-200%);}
   }
-  100% {
-    transform: translateX(0%);
+
+  @keyframes show-icons {
+    0% {
+      transform: translateX(-200%);
+    }
+    100% {
+      transform: translateX(0%);
+    }
   }
 }
 
 .container img {
   aspect-ratio: 1/1;
-  max-width: 15em;
+  max-width: min(15em, 50vh);
   animation: 
     change-icon-position 0ms linear 0ms 1 forwards,
     show-icons 1000ms ease calc(100ms + (1000ms*var(--order)/var(--times))) 1 forwards;
 }
 
-.text {
-  width: 0px;
-  overflow: hidden;
-  height: 15em;
-}
 

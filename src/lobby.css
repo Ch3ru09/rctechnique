@@ -112,10 +112,14 @@
 
 .text {
   position: relative;
-  width: 0%;
+  width: 0;
   overflow: hidden;
   height: 15em;
   transition: width 500ms ease;
+}
+
+.icon-box:hover {
+  cursor: pointer;
 }
 
 .icon-box:hover .text {
