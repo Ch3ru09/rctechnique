@@ -19,7 +19,7 @@ export default class Lobby extends React.Component {
         </div>
         <div className="container bg-primary-200">
           <div className="icon-box">
-            <div>
+            <div className="img-box">
               <img 
               src={process.env.PUBLIC_URL + "img/smartphone.png"} 
               alt="phone"
@@ -28,10 +28,8 @@ export default class Lobby extends React.Component {
               style={{"--order": "1", "--times": "3"}} />
               {/* https://www.flaticon.com/free-icons/phone */}
             </div>
-            <section>
-              <div className="text">
-                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Accusantium, ab veniam. Voluptate blanditiis perferendis ex molestiae corporis illo maxime provident laudantium, aliquid dolor, assumenda tempora omnis cupiditate temporibus dignissimos magni sunt aliquam esse itaque, id consequuntur veritatis possimus labore! Sed natus recusandae laboriosam incidunt excepturi vel consequatur tenetur, quaerat magnam aliquid facilis sint corrupti assumenda iusto deserunt, soluta atque! Esse dolor, eligendi odio excepturi architecto, cupiditate aliquam ratione accusamus asperiores harum, laudantium culpa a nihil temporibus ab dolorem omnis est. Impedit iste hic itaque enim excepturi id nesciunt, unde dolores commodi sapiente cupiditate quasi consequatur eius atque expedita deleniti quod?</p>
-              </div>
+            <section className="text">
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit dolores est id aspernatur voluptas iusto laudantium fuga architecto porro veritatis? Accusantium maxime qui rerum autem?</p>
             </section>
           </div>
           <div className="icon-box">

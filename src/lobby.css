@@ -99,12 +99,26 @@
   margin-top: 1em;
 }
 
+.icon-box {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+}
+
 .icon-box > div {
   max-width: 200px;
   margin: 0;
 }
 
 .text {
-  position: absolute;
-  
+  position: relative;
+  width: 0%;
+  overflow: hidden;
+  height: 15em;
+  transition: width 500ms ease;
+}
+
+.icon-box:hover .text {
+  width: 15rem;
+  transition: width 500ms ease;
 }

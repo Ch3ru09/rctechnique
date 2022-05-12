@@ -68,7 +68,7 @@ img:hover {
   cursor: pointer;
 }
 
-@media (min-width:48rem) {
+@media (min-width: 47rem) {
   @keyframes change-icon-position {
     0% {
       transform: translateY(0%);
@@ -97,21 +97,17 @@ img:hover {
   }
 }
 
+@keyframes change-icon-position {
+  0% {transform: translateX(0%);}
+  100% {transform: translateX(-200%);}
+}
 
-
-@media (max-width: 48em) {
-  @keyframes change-icon-position {
-    0% {transform: translateX(0%);}
-    100% {transform: translateX(-200%);}
+@keyframes show-icons {
+  0% {
+    transform: translateX(-200%);
   }
-
-  @keyframes show-icons {
-    0% {
-      transform: translateX(-200%);
-    }
-    100% {
-      transform: translateX(0%);
-    }
+  100% {
+    transform: translateX(0%);
   }
 }
 
@@ -121,5 +117,11 @@ img:hover {
   animation: 
     change-icon-position 0ms linear 0ms 1 forwards,
     show-icons 1000ms ease calc(100ms + (1000ms*var(--order)/var(--times))) 1 forwards;
+}
+
+.text {
+  width: 0px;
+  overflow: hidden;
+  height: 15em;
 }
 
