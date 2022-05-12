@@ -64,6 +64,12 @@ body {
   flex-direction: column;
 }
 
+.container:before {
+  content: '';
+  z-index: -1;
+  width: 100%;
+}
+
 @media (min-width: 47rem) {
   @keyframes change-icon-position {
     0% {
@@ -106,14 +112,6 @@ body {
       transform: translateX(0%);
     }
   }
-}
-
-.container img {
-  aspect-ratio: 1/1;
-  max-width: min(15em, 50vh);
-  animation: 
-    change-icon-position 0ms linear 0ms 1 forwards,
-    show-icons 1000ms ease calc(100ms + (1000ms*var(--order)/var(--times))) 1 forwards;
 }
 
 

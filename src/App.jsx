@@ -17,19 +17,19 @@ export default class App extends React.Component {
 
   changePage(page) {
     switch (page) {
-      case "phones":
+      case "phone":
         this.setState({page: <Phones />})
         break
-      case "tablets":
+      case "tablet":
         this.setState({page: <Tablets />})
         break
-      case "laptops":
+      case "laptop":
         this.setState({page: <Laptops />})
         break
-      case "plants":
+      case "plant":
         this.setState({page: <Plants />})
         break
-      case "stickers":
+      case "sticker":
         this.setState({page: <Stickers />})
         break
       default:

@@ -11,66 +11,74 @@ export default class Lobby extends React.Component {
     this.props.changePage(page);
   }
 
+  handleMouseOver(e) {
+    console.log('>>', e)
+  }
+
   render() {
     return (
       <>
-        <div className='title-container container'>
+        <div className='title-container'>
           <h1 className="company-title">RC Technique</h1>
         </div>
-        <div className="container bg-primary-200">
-          <div className="icon-box">
-            <div className="img-box">
-              <img 
-              src={process.env.PUBLIC_URL + "img/smartphone.png"} 
-              alt="phone"
-              onClick={() => {this.handleImageClick("phones")}}
-              tabIndex="0"
-              style={{"--order": "1", "--times": "3"}} />
-              {/* https://www.flaticon.com/free-icons/phone */}
-            </div>
-            <section className="text">
-              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit dolores est id aspernatur voluptas iusto laudantium fuga architecto porro veritatis? Accusantium maxime qui rerum autem?</p>
-            </section>
-          </div>
-          <div className="icon-box">
-            <img
-              src={process.env.PUBLIC_URL + "img/tablet.png"}
-              alt="tablet"
-              onClick={() => {this.handleImageClick("tablets")}}
-              tabIndex="0"
-              style={{"--order": "2", "--times": "3"}} /> 
-              {/* https://www.flaticon.com/free-icons/tablet */}
-          </div>
-          <div className="icon-box">
-            <img
-              src={process.env.PUBLIC_URL + "img/laptop.png"}
-              alt="laptop"
-              onClick={() => {this.handleImageClick("laptops")}}
-              tabIndex="0"
-              style={{"--order": "3", "--times": "3"}} />
-              {/* https://www.flaticon.com/free-icons/laptop */}
-          </div>
-        </div>
-        <div className="container bg-dark-700">
-          <div className="icon-box">
-            <img
-              src={process.env.PUBLIC_URL + "img/plant.png"}
-              alt="plant"
-              onClick={() => {this.handleImageClick("plants")}}
-              tabIndex="0"
-              style={{"--order": "1", "--times": "2"}} />
-          </div>
-          <div className="icon-box">
-            <img
-              src={process.env.PUBLIC_URL + "img/sticker.png"}
-              alt="sticker"
-              onClick={() => {this.handleImageClick("stickers")}}
-              tabIndex="0"
-              style={{"--order": "2", "--times": "2"}} />
-          </div>
-        </div>
+        <Containers 
+          hendleImageClick={this.handleImageClick.bind(this)}
+          handleMouseOver={this.handleMouseOver.bind(this)} />
       </>
       
+    )
+  }
+}
+
+class Containers extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      rows: [
+        ["phone", "tablet", "laptop"],
+        ["plant", "sticker"]
+      ],
+      colors: [
+        "primary-200",
+        "dark-700"
+      ]
+    }
+  }
+
+  render() {
+    return (
+      this.state.rows.map((row, index) => {
+        return (
+          <div className={"container bg-" + this.state.colors[index]} key={index}>
+            {row.map((name, i, arr) => {
+              return (
+                <div
+                  key={name}
+                  className="icon-box"
+                  tabIndex="0"
+                  onMouseOver={(e) => {this.props.handleMouseOver(e)}}>
+                  <div className="img-box">
+                    <img
+                    src={process.env.PUBLIC_URL + `img/${name}.png`}
+                    alt={`${name}`}
+                    onClick={() => {this.props.handleImageClick(`${name}`)}}
+            
+                    style={{"--order": `${i+1}`, "--times": `${arr.length}`}} />
+                    {/* https://www.flaticon.com/free-icons/phone */}
+                  </div>
+                  <section className="text">
+                    <h2>{name}</h2>
+                    <ul>
+                      <li></li>
+                    </ul>
+                  </section>
+                </div>
+              )
+            })}
+          </div>
+        )
+        
+      })
     )
   }
 }
