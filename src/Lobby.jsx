@@ -30,55 +30,45 @@ export default class Lobby extends React.Component {
   }
 }
 
-class Containers extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      rows: [
-        ["phone", "tablet", "laptop"],
-        ["plant", "sticker"]
-      ],
-      colors: [
-        "primary-200",
-        "dark-700"
-      ]
-    }
-  }
+function Containers(props) {
+  const rows = [
+    ["phone", "tablet", "laptop"],
+    ["plant", "sticker"]
+  ];
+  const colors= [
+    "primary-200",
+    "dark-700"
+  ];
 
-  render() {
-    return (
-      this.state.rows.map((row, index) => {
-        return (
-          <div className={"container bg-" + this.state.colors[index]} key={index}>
-            {row.map((name, i, arr) => {
-              return (
-                <div
-                  key={name}
-                  className="icon-box"
-                  tabIndex="0"
-                  onMouseOver={(e) => {this.props.handleMouseOver(e)}}>
-                  <div className="img-box">
-                    <img
-                    src={process.env.PUBLIC_URL + `img/${name}.png`}
-                    alt={`${name}`}
-                    onClick={() => {this.props.handleImageClick(`${name}`)}}
-            
-                    style={{"--order": `${i+1}`, "--times": `${arr.length}`}} />
-                    {/* https://www.flaticon.com/free-icons/phone */}
-                  </div>
-                  <section className="text">
-                    <h2>{name}</h2>
-                    <ul>
-                      <li></li>
-                    </ul>
-                  </section>
+  return (
+    rows.map((row, index) => {
+      return (
+        <div className={"container bg-" + colors[index]} key={index}>
+          {row.map((name, i, arr) => {
+            return (
+              <div
+                key={name}
+                className="icon-box"
+                tabIndex="0"
+                onMouseOver={(e) => {this.props.handleMouseOver(e)}}>
+                <div className="img-box">
+                  <img
+                  src={process.env.PUBLIC_URL + `img/${name}.png`}
+                  alt={`${name}`}
+                  onClick={() => {this.props.handleImageClick(`${name}`)}}
+          
+                  style={{"--order": `${i+1}`, "--times": `${arr.length}`}} />
                 </div>
-              )
-            })}
-          </div>
-        )
-        
-      })
-    )
-  }
+                <section className="text">
+                  <h2>{name}</h2>
+                  {/* TODO: put info here */}
+                </section>
+              </div>
+            )
+          })}
+        </div>
+      )
+      
+    })
+  )
 }
