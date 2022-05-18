@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import './lobby.css'
 
 export default class Lobby extends React.Component {
@@ -11,8 +11,27 @@ export default class Lobby extends React.Component {
     this.props.changePage(page);
   }
 
-  handleMouseOver(e) {
-    console.log('>>', e)
+  handleMouseEnter(id, rowIndex) {
+    // get boxes
+    const boxes = document.querySelectorAll(`#${rowIndex} .item-box:not(#${id})`)
+    Array.from(boxes).forEach(b => {
+      b.classList.add('shrink')
+    })
+    const box = document.querySelector(`#${id}`)
+    box.classList.remove('shrink')
+    box.classList.add('grow')
+  }
+
+  handleMouseLeave(id, rowIndex) {
+    // get boxes
+    // const box = document.querySelector(`#${id}`)
+    // box.classList.remove('grow')
+    const boxes = document.querySelectorAll(`#${rowIndex} .item-box`)
+    Array.from(boxes).forEach(b => {
+      b.classList.remove('shrink')
+      b.classList.remove('grow')
+      
+    })
   }
 
   render() {
@@ -22,8 +41,9 @@ export default class Lobby extends React.Component {
           <h1 className="company-title">RC Technique</h1>
         </div>
         <Containers 
-          hendleImageClick={this.handleImageClick.bind(this)}
-          handleMouseOver={this.handleMouseOver.bind(this)} />
+          handleImageClick={this.handleImageClick.bind(this)}
+          handleMouseEnter={this.handleMouseEnter.bind(this)}
+          handleMouseLeave={this.handleMouseLeave.bind(this)} />
       </>
       
     )
@@ -35,29 +55,30 @@ function Containers(props) {
     ["phone", "tablet", "laptop"],
     ["plant", "sticker"]
   ];
-  const colors= [
+  const [colors, setColors] = useState([
     "primary-200",
     "dark-700"
-  ];
+  ]);
 
   return (
     rows.map((row, index) => {
       return (
-        <div className={"container bg-" + colors[index]} key={index}>
+        <div className={`container bg-${colors[index]}`} id={`row-${index}`} key={index}>
           {row.map((name, i, arr) => {
             return (
               <div
                 key={name}
-                className="icon-box"
+                id={`${name}`}
+                className={`item-box`}
                 tabIndex="0"
-                onMouseOver={(e) => {this.props.handleMouseOver(e)}}>
+                style={{"--order": `${i+1}`, "--times": `${arr.length}`}}
+                onMouseEnter={() => props.handleMouseEnter(`${name}`, `row-${index}`)}
+                onMouseLeave={() => props.handleMouseLeave(`${name}`, `row-${index}`)} >
                 <div className="img-box">
                   <img
-                  src={process.env.PUBLIC_URL + `img/${name}.png`}
-                  alt={`${name}`}
-                  onClick={() => {this.props.handleImageClick(`${name}`)}}
-          
-                  style={{"--order": `${i+1}`, "--times": `${arr.length}`}} />
+                    src={process.env.PUBLIC_URL + `img/${name}.png`}
+                    alt={`${name}`}
+                    onClick={() => {props.handleImageClick(`${name}`)}}/>
                 </div>
                 <section className="text">
                   <h2>{name}</h2>

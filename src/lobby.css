@@ -8,7 +8,6 @@
   width: 100%;
   flex-direction: column;
   padding-top: 0% !important;
-
 }
 
 .company-title {
@@ -90,9 +89,6 @@
   max-width: min(15em, 50vh);
   height: auto;
   transition: max-width 500ms ease;
-  animation: 
-    change-icon-position 0ms linear 0ms 1 forwards,
-    show-icons 1000ms ease calc(100ms + (1000ms*var(--order)/var(--times))) 1 forwards;
 }
 
 .icon-container {
@@ -118,14 +114,18 @@
   margin-top: 1em;
 }
 
-.icon-box {
+.item-box {
   display: flex;
   flex-direction: row;
   flex-wrap: nowrap;
+  transition: flex-grow 500ms ease, max-width 500ms ease;
+  animation: 
+    change-icon-position 0ms linear 0ms 1 forwards,
+    show-icons 1000ms ease calc(100ms + (1000ms*var(--order)/var(--times))) 1 forwards;
 }
 
-.icon-box > div {
-  max-width: 200px;
+.item-box > .img-box {
+  max-width: 100%;
   margin: 0;
 }
 
@@ -137,7 +137,18 @@
   transition: width 500ms ease;
 }
 
-.shrink {
+.shrink img {
   max-width: min(9em, 30vh);
+  transition: max-width 500ms ease;
 }
 
+.grow {
+  flex-grow: var(--times);
+  transition: flex-grow 500ms ease;
+  cursor: pointer;
+  -webkit-text-fill-color: plum;
+}
+
+.grow img {
+  filter: invert(100%);
+}
