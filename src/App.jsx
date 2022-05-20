@@ -1,39 +1,56 @@
 import React from "react"
 import Lobby from "./Lobby.jsx"
 import Phones from "./Phones.jsx"
-import Tablets from "./Tablets.js"
+import Tablets from "./Tablets.jsx"
 import Laptops from "./Laptops.jsx"
 import Plants from "./Plants.jsx"
 import Stickers from "./Stickers.jsx"
 import "./app.css"
+import { toHaveStyle } from "@testing-library/jest-dom/dist/matchers"
 
 export default class App extends React.Component {
   constructor () {
     super()
     this.state = {
-      page: <Lobby changePage={this.changePage.bind(this)} />
+      page: 1,
+      colors: [
+        "primary-200",
+        "dark-700",
+      ],
     }
+    this.pages = {
+      phone: <Phones />,
+      tablet: <Tablets />,
+      laptop: <Laptops />,
+      plant: <Plants />,
+      sticker: <Stickers />,
+      lobby: <Lobby changePage={this.changePage.bind(this)} colors={this.state.colors} />
+    }
+  }
+
+  componentDidMount() {
+    this.setState({page: this.pages.lobby})
   }
 
   changePage(page) {
     switch (page) {
-      case "phones":
-        this.setState({page: <Phones />})
+      case "phone":
+        this.setState({page: this.pages.phones});
         break
-      case "tablets":
-        this.setState({page: <Tablets />})
+      case "tablet":
+        this.setState({page: this.pages.tablets});
         break
-      case "laptops":
-        this.setState({page: <Laptops />})
+      case "laptop":
+        this.setState({page: this.pages.laptop});
         break
-      case "plants":
-        this.setState({page: <Plants />})
+      case "plant":
+        this.setState({page: this.pages.plant});
         break
-      case "stickers":
-        this.setState({page: <Stickers />})
+      case "sticker":
+        this.setState({page: this.pages.sticker});
         break
       default:
-        this.setState({page: <Lobby changePage={this.changePage.bind(this)} />})
+        this.setState({page: this.pages.lobby});
         break
     }
   }
@@ -46,7 +63,8 @@ export default class App extends React.Component {
             src={process.env.PUBLIC_URL + "260795084017212.png"} 
             alt="logo" 
             className="logo-img"
-            onClick={() => {this.changePage()}} />
+            onClick={() => {this.changePage()}}
+            />
         </header>
         <main>
           {this.state.page}
