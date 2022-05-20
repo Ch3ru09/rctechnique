@@ -43,7 +43,8 @@ export default class Lobby extends React.Component {
         <Containers 
           handleImageClick={this.handleImageClick.bind(this)}
           handleMouseEnter={this.handleMouseEnter.bind(this)}
-          handleMouseLeave={this.handleMouseLeave.bind(this)} />
+          handleMouseLeave={this.handleMouseLeave.bind(this)}
+          colors={this.props.colors} />
       </>
       
     )
@@ -55,15 +56,12 @@ function Containers(props) {
     ["phone", "tablet", "laptop"],
     ["plant", "sticker"]
   ];
-  const [colors, setColors] = useState([
-    "primary-200",
-    "dark-700"
-  ]);
+
 
   return (
     rows.map((row, index) => {
       return (
-        <div className={`container bg-${colors[index]}`} id={`row-${index}`} key={index}>
+        <div className={`container bg-${props.colors[index]}`} id={`row-${index}`} key={index}>
           {row.map((name, i, arr) => {
             return (
               <div
