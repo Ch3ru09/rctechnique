@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import './lobby.css'
 
 export default class Lobby extends React.Component {
@@ -15,6 +15,7 @@ export default class Lobby extends React.Component {
     // get boxes
     const boxes = document.querySelectorAll(`#${rowIndex} .item-box:not(#${id})`)
     Array.from(boxes).forEach(b => {
+      b.classList.add('grow')
       b.classList.add('shrink')
     })
     const box = document.querySelector(`#${id}`)
@@ -57,6 +58,11 @@ function Containers(props) {
     ["plant", "sticker"]
   ];
 
+  this.handleFocus = () => {
+    console.log('test')
+  }
+
+  this.useEffect()
 
   return (
     rows.map((row, index) => {
@@ -71,7 +77,8 @@ function Containers(props) {
                 tabIndex="0"
                 style={{"--order": `${i+1}`, "--times": `${arr.length}`}}
                 onMouseEnter={() => props.handleMouseEnter(`${name}`, `row-${index}`)}
-                onMouseLeave={() => props.handleMouseLeave(`${name}`, `row-${index}`)} >
+                onMouseLeave={() => props.handleMouseLeave(`${name}`, `row-${index}`)}
+                onFocus={() => this.handleFocus()} >
                 <div className="img-box">
                   <img
                     src={process.env.PUBLIC_URL + `img/${name}.png`}

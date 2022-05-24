@@ -6,7 +6,6 @@ import Laptops from "./Laptops.jsx"
 import Plants from "./Plants.jsx"
 import Stickers from "./Stickers.jsx"
 import "./app.css"
-import { toHaveStyle } from "@testing-library/jest-dom/dist/matchers"
 
 export default class App extends React.Component {
   constructor () {
