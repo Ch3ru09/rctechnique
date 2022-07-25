@@ -4,18 +4,15 @@ export default class Phones extends React.Component {
   render() {
     return (
       <>
-        <div className="container">
-
-        </div>
-
-        <div className="container">
-
-        </div>
-
-        <div className="container">
-          
-        </div>
+        <OrbitSystem colors={this.props.colors} />
       </>
     )
   }
+}
+
+function OrbitSystem(props) {
+  
+  return (
+    <div className="orbit-system"></div>
+  )
 }

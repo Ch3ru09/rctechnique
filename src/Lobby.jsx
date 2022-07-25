@@ -15,7 +15,7 @@ export default class Lobby extends React.Component {
     // get boxes
     const boxes = document.querySelectorAll(`#${rowIndex} .item-box:not(#${id})`)
     Array.from(boxes).forEach(b => {
-      b.classList.add('grow')
+      b.classList.remove('grow')
       b.classList.add('shrink')
     })
     const box = document.querySelector(`#${id}`)
@@ -58,40 +58,42 @@ function Containers(props) {
     ["plant", "sticker"]
   ];
 
-  this.handleFocus = () => {
-    console.log('test')
-  }
+  // this.handleFocus = function() {
+  //   console.log('test')
+  // }
 
-  this.useEffect()
+  // this.useEffect()
 
   return (
     rows.map((row, index) => {
       return (
-        <div className={`container bg-${props.colors[index]}`} id={`row-${index}`} key={index}>
-          {row.map((name, i, arr) => {
-            return (
-              <div
-                key={name}
-                id={`${name}`}
-                className={`item-box`}
-                tabIndex="0"
-                style={{"--order": `${i+1}`, "--times": `${arr.length}`}}
-                onMouseEnter={() => props.handleMouseEnter(`${name}`, `row-${index}`)}
-                onMouseLeave={() => props.handleMouseLeave(`${name}`, `row-${index}`)}
-                onFocus={() => this.handleFocus()} >
-                <div className="img-box">
-                  <img
-                    src={process.env.PUBLIC_URL + `img/${name}.png`}
-                    alt={`${name}`}
-                    onClick={() => {props.handleImageClick(`${name}`)}}/>
+        <div className={`container bg-${props.colors[index]}`} >
+          <div className="cont" id={`row-${index}`} key={index}>
+            {row.map((name, i, arr) => {
+              return (
+                <div
+                  key={name}
+                  id={`${name}`}
+                  className={`item-box`}
+                  tabIndex="0"
+                  style={{"--order": `${i+1}`, "--times": `${arr.length}`}}
+                  onMouseEnter={() => props.handleMouseEnter(`${name}`, `row-${index}`)}
+                  onMouseLeave={() => props.handleMouseLeave(`${name}`, `row-${index}`)}
+                  onFocus={() => {}} >
+                  <div className="img-box">
+                    <img
+                      src={process.env.PUBLIC_URL + `img/${name}.png`}
+                      alt={`${name}`}
+                      onClick={() => {props.handleImageClick(`${name}`)}}/>
+                  </div>
+                  <section className="text">
+                    <h2>{name}</h2>
+                    {/* TODO: put info here */}
+                  </section>
                 </div>
-                <section className="text">
-                  <h2>{name}</h2>
-                  {/* TODO: put info here */}
-                </section>
-              </div>
-            )
-          })}
+              )
+            })}
+          </div>
         </div>
       )
       

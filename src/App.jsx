@@ -1,4 +1,5 @@
 import React from "react"
+
 import Lobby from "./Lobby.jsx"
 import Phones from "./Phones.jsx"
 import Tablets from "./Tablets.jsx"
@@ -32,26 +33,27 @@ export default class App extends React.Component {
   }
 
   changePage(page) {
-    switch (page) {
-      case "phone":
-        this.setState({page: this.pages.phones});
-        break
-      case "tablet":
-        this.setState({page: this.pages.tablets});
-        break
-      case "laptop":
-        this.setState({page: this.pages.laptop});
-        break
-      case "plant":
-        this.setState({page: this.pages.plant});
-        break
-      case "sticker":
-        this.setState({page: this.pages.sticker});
-        break
-      default:
-        this.setState({page: this.pages.lobby});
-        break
-    }
+    this.setState({page: this.pages[page]});
+    // switch (page) {
+    //   case "phone":
+    //     this.setState({page: this.pages.phone});
+    //     break
+    //   case "tablet":
+    //     this.setState({page: this.pages.tablet});
+    //     break
+    //   case "laptop":
+    //     this.setState({page: this.pages.laptop});
+    //     break
+    //   case "plant":
+    //     this.setState({page: this.pages.plant});
+    //     break
+    //   case "sticker":
+    //     this.setState({page: this.pages.sticker});
+    //     break
+    //   default:
+    //     this.setState({page: this.pages.lobby});
+    //     break
+    // }
   }
 
   render () {
@@ -62,7 +64,7 @@ export default class App extends React.Component {
             src={process.env.PUBLIC_URL + "260795084017212.png"} 
             alt="logo" 
             className="logo-img"
-            onClick={() => {this.changePage()}}
+            onClick={() => {this.changePage("lobby")}}
             />
         </header>
         <main>

@@ -89,6 +89,7 @@
   max-width: min(15em, 50vh);
   height: auto;
   transition: max-width 500ms ease;
+  filter: invert(0%);
 }
 
 .icon-container {
@@ -143,7 +144,7 @@
 }
 
 .grow {
-  flex-grow: var(--times);
+  flex-grow: 1;
   transition: flex-grow 500ms ease;
   cursor: pointer;
   -webkit-text-fill-color: plum;
@@ -151,4 +152,5 @@
 
 .grow img {
   filter: invert(100%);
+  max-width: min(20em, 60vh) !important;
 }
