@@ -1,6 +1,6 @@
 import Image from "next/image";
 
-export default function ServicesSection() {
+export default function SectionServices() {
   return (
     <section className="bg-gray-100 py-16">
       <div className="container mx-auto">

@@ -1,6 +1,6 @@
 import Image from "next/image";
 
-export default function HeroSection() {
+export default function SectionHero() {
   return (
     <section className="hero bg-black py-20 md:py-32 px-6 md:px-20 flex flex-col md:flex-row items-center justify-between">
       <div className="hero-content md:max-w-md mb-10 md:mb-0 md:mr-16">

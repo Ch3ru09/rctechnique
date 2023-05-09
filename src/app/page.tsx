@@ -1,9 +1,9 @@
-import Head from "next/head";
 import Link from "next/link";
 import type { Metadata } from "next";
 
-import HeroSection from "./HeroSection";
-import ServicesSection from "./ServicesSection";
+import SectionHero from "./SectionHero";
+import SectionServices from "./SectionServices";
+import SectionTestimonials from "./SectionTestimonials";
 
 export const metadata: Metadata = {
   title: "RC Technique - Phone Repair",
@@ -25,8 +25,8 @@ export default function HomePage() {
           </Link>
         </div>
       </div>
-      <HeroSection />
-      <ServicesSection />
+      <SectionHero />
+      <SectionServices />
     </>
   );
 }

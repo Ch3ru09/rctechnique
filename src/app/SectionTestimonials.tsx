@@ -1,4 +1,4 @@
-export default function TestimonialsSection() {
+export default function SectionTestimonials() {
   const testimonials = [
     {
       id: 1,
