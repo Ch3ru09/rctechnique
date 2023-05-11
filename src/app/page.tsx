@@ -27,6 +27,7 @@ export default function HomePage() {
       </div>
       <SectionHero />
       <SectionServices />
+      <SectionTestimonials />
     </>
   );
 }
