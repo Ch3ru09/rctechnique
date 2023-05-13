@@ -4,6 +4,8 @@ import type { Metadata } from "next";
 import SectionHero from "./SectionHero";
 import SectionServices from "./SectionServices";
 import SectionTestimonials from "./SectionTestimonials";
+import SectionFAQ from "./SectionFAQ";
+import SectionContact from "./SectionContact";
 
 export const metadata: Metadata = {
   title: "RC Technique - Phone Repair",
@@ -28,7 +30,8 @@ export default function HomePage() {
       <SectionHero />
       <SectionServices />
       <SectionTestimonials />
+      <SectionFAQ />
+      <SectionContact />
     </>
   );
 }
-
