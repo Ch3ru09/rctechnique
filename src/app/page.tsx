@@ -1,7 +1,6 @@
 import Link from "next/link";
 import type { Metadata } from "next";
 
-import SectionHero from "./SectionHero";
 import SectionServices from "./SectionServices";
 import SectionTestimonials from "./SectionTestimonials";
 import SectionFAQ from "./SectionFAQ";
@@ -31,7 +30,6 @@ export default function HomePage() {
           </Link>
         </div>
       </div>
-      <SectionHero />
       <SectionServices />
       <SectionTestimonials />
       <SectionFAQ />
@@ -39,3 +37,4 @@ export default function HomePage() {
     </>
   );
 }
+

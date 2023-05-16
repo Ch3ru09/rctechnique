@@ -44,7 +44,7 @@ export function TestimonialCard({ testimonial }: CardProps) {
   const { name, quote, image } = testimonial;
 
   return (
-    <div className="bg-white overflow-hidden shadow rounded-lg">
+    <div className="bg-gray-50 overflow-hidden shadow rounded-lg">
       <div className="px-4 py-5 sm:p-6">
         <div className="flex items-center mb-3">
           <div className="flex-shrink-0">
