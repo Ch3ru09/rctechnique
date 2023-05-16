@@ -3,7 +3,6 @@ import type { Metadata } from "next";
 
 import SectionServices from "./SectionServices";
 import SectionTestimonials from "./SectionTestimonials";
-import SectionFAQ from "./SectionFAQ";
 import SectionContact from "./SectionContact";
 
 export const metadata: Metadata = {
@@ -25,14 +24,13 @@ export default function HomePage() {
           </h1>
           <p className="text-xl text-gray-600 mb-8">We know that [Industry problem] can be frustrating and time-consuming, which is why we've dedicated ourselves to providing [Industry solution] that are reliable, efficient, and affordable.</p>
           <p className="text-xl text-gray-600 mb-8">Our team of experienced professionals has the skills and expertise to [Industry solution 1]. We specialize in [Industry solution 2] and [Industry solution 3], and we're committed to delivering [Industry solution 4] that meet and exceed your expectations.</p>
-          <Link href="/contact" className="inline-block bg-blue-500 hover:bg-blue-600  font-bold py-4 px-8 rounded-lg transition-colors duration-300">
+          <Link href="/contact" className="inline-block bg-green-500 hover:bg-green-600  font-bold py-4 px-8 rounded-lg transition-colors duration-300">
             Get in touch
           </Link>
         </div>
       </div>
       <SectionServices />
       <SectionTestimonials />
-      <SectionFAQ />
       <SectionContact />
     </>
   );
