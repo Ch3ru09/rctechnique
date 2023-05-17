@@ -11,6 +11,10 @@ export const metadata = {
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
+  const handleChangeTheme = (e: MouseEvent) => {
+    e.preventDefault();
+  };
+
   return (
     <html lang="en">
       <body className={inter.className}>

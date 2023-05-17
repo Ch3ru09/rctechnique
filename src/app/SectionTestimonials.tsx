@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 export default function SectionTestimonials() {
   const testimonials = [
     {
@@ -21,7 +23,7 @@ export default function SectionTestimonials() {
   ];
 
   return (
-    <div className="bg-gray-100 py-12">
+    <div className="bg-gray-100 py-12" id="testimonials">
       <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="lg:text-center">
           <h2 className="text-base text-blue-600 font-semibold tracking-wide uppercase">Testimonials</h2>
@@ -40,15 +42,13 @@ export default function SectionTestimonials() {
   );
 }
 
-export function TestimonialCard({ testimonial }: CardProps) {
-  const { name, quote, image } = testimonial;
-
+export function TestimonialCard({ name, quote, image }: CardProps) {
   return (
     <div className="bg-gray-50 overflow-hidden shadow rounded-lg">
       <div className="px-4 py-5 sm:p-6">
         <div className="flex items-center mb-3">
           <div className="flex-shrink-0">
-            <img className="h-10 w-10 rounded-full" src={image} alt={name} />
+            <Image className="h-10 w-10 rounded-full" src={image} alt={name} />
           </div>
           <div className="ml-3">
             <p className="text-sm font-medium text-gray-900">{name}</p>
@@ -61,10 +61,8 @@ export function TestimonialCard({ testimonial }: CardProps) {
 }
 
 type CardProps = {
-  testimonial: {
-    name: string;
-    quote: string;
-    image: string;
-  };
+  name: string;
+  quote: string;
+  image: string;
 };
 

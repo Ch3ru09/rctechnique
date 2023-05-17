@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 
 export default function SectionServices() {
   return (
@@ -11,8 +12,10 @@ export default function SectionServices() {
               <Image src="/service-1.jpg" alt="Service 1" width={300} height={200} className="rounded-md" />
             </div>
             <h3 className="text-xl font-bold mb-2">Screen Repair</h3>
-            <p className="text-gray-700 leading-relaxed mb-4">We can fix any cracked or damaged phone screen, whether it's an iPhone, Samsung, or any other make and model.</p>
-            <button className="bg-green-500 hover:bg-green-600  font-bold py-2 px-4 rounded">Learn More</button>
+            <p className="text-gray-700 leading-relaxed mb-4">We can fix any cracked or damaged phone screen, whether it's an iPhone, Samsung, or any other company or model.</p>
+            <Link className="bg-green-500 hover:bg-green-600  font-bold py-3 px-4 rounded after:content-['↗'] after:text-xs" href="/services">
+              Learn more &nbsp;
+            </Link>
           </div>
           <div className="bg-gray-50 shadow-lg rounded-lg p-6">
             <div className="mb-4">
@@ -20,15 +23,19 @@ export default function SectionServices() {
             </div>
             <h3 className="text-xl font-bold mb-2">Battery Replacement</h3>
             <p className="text-gray-700 leading-relaxed mb-4">Is your phone battery not holding a charge like it used to? We can replace it quickly and affordably.</p>
-            <button className="bg-green-500 hover:bg-green-600  font-bold py-2 px-4 rounded">Learn More</button>
+            <Link className="bg-green-500 hover:bg-green-600  font-bold py-3 px-4 rounded after:content-['↗'] after:text-xs" href="/services">
+              Learn more &nbsp;
+            </Link>
           </div>
           <div className="bg-gray-50 shadow-lg rounded-lg p-6">
             <div className="mb-4">
               <Image src="/service-3.jpg" alt="Service 3" width={300} height={200} className="rounded-md" />
             </div>
-            <h3 className="text-xl font-bold mb-2">Water Damage Repair</h3>
-            <p className="text-gray-700 leading-relaxed mb-4">Accidentally dropped your phone in the pool or spilled a drink on it? We can repair water damage and get your phone back up and running.</p>
-            <button className="bg-green-500 hover:bg-green-600  font-bold py-2 px-4 rounded">Learn More</button>
+            <h3 className="text-xl font-bold mb-2">And Much More...</h3>
+            <p className="text-gray-700 leading-relaxed mb-4">We do not limit ourselves to these 2 services. See more on our services page to see more.</p>
+            <Link className="bg-green-500 hover:bg-green-600  font-bold py-3 px-4 rounded after:content-['↗'] after:text-xs" href="/services">
+              See all services &nbsp;
+            </Link>
           </div>
         </div>
       </div>
