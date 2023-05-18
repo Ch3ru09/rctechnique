@@ -8,7 +8,7 @@ export default function Navbar() {
   const location = usePathname();
 
   return (
-    <nav className="bg-green-100 shadow-2xl">
+    <nav className="bg-green-100">
       <div className="container mx-auto px-4 py-5">
         <div className="flex justify-between items-center">
           {location == "/" ? <div></div> : <Image src="/logo.png" alt="" className="h-full w-auto aspect-square" width={50} height={50} />}
