@@ -42,8 +42,8 @@ export default function SectionTestimonials() {
   );
 }
 
-export function TestimonialCard(props: CardProps) {
-  const { name, quote, image } = props.testimonial;
+export function TestimonialCard({ testimonial }: CardProps) {
+  const { name, quote, image } = testimonial;
 
   return (
     <div className="bg-gray-50 overflow-hidden shadow rounded-lg">
@@ -69,3 +69,4 @@ type CardProps = {
     image: string;
   };
 };
+

@@ -4,7 +4,7 @@ import Link from "next/link";
 export default function SectionIntro() {
   return (
     <div className="bg-green-100 relative">
-      <Image src="/logo.png" alt="" className="h-full w-auto aspect-square absolute opacity-75 right-20 z-10" width={516} height={516} />
+      <Image src="/logo.png" alt="" className="h-full sm:h-auto -bottom-[40%] 2xs:-bottom-[35%] xs:bottom-0 xl:-bottom-[40%] absolute opacity-75 md:right-20 z-10 object-contain" width={516} height={516} />
       <div className="container relative mx-auto py-12 px-4 sm:px-6 lg:px-8 z-20">
         <h1 className="text-4xl sm:text-5xl md:text-6xl font-extrabold leading-tight text-gray-900 mb-8">
           Welcome to <span className="text-red-500">RC Technique</span> , the phone and computer repair experts.
@@ -17,3 +17,4 @@ export default function SectionIntro() {
     </div>
   );
 }
+

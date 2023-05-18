@@ -10,6 +10,10 @@ module.exports = {
         "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
         "gradient-conic": "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
       },
+      screens: {
+        "2xs": "340px",
+        xs: "426px",
+      },
     },
     colors: {
       transparent: "transparent",
