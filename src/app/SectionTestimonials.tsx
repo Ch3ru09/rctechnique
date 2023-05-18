@@ -42,13 +42,15 @@ export default function SectionTestimonials() {
   );
 }
 
-export function TestimonialCard({ name, quote, image }: CardProps) {
+export function TestimonialCard(props: CardProps) {
+  const { name, quote, image } = props.testimonial;
+
   return (
     <div className="bg-gray-50 overflow-hidden shadow rounded-lg">
       <div className="px-4 py-5 sm:p-6">
         <div className="flex items-center mb-3">
           <div className="flex-shrink-0">
-            <Image className="h-10 w-10 rounded-full" src={image} alt={name} />
+            <Image className="h-10 w-10 rounded-full" src={image} alt={name} width={100} height={100} />
           </div>
           <div className="ml-3">
             <p className="text-sm font-medium text-gray-900">{name}</p>
@@ -61,8 +63,9 @@ export function TestimonialCard({ name, quote, image }: CardProps) {
 }
 
 type CardProps = {
-  name: string;
-  quote: string;
-  image: string;
+  testimonial: {
+    name: string;
+    quote: string;
+    image: string;
+  };
 };
-
