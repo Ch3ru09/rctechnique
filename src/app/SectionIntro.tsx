@@ -3,9 +3,9 @@ import Link from "next/link";
 
 export default function SectionIntro() {
   return (
-    <div className="bg-green-100 relative -z-20">
-      <Image src="/logo.png" alt="" className="h-full w-auto aspect-square absolute -z-10 opacity-75 right-10" width={516} height={516} />
-      <div className="container mx-auto py-12 px-4 sm:px-6 lg:px-8 z-10">
+    <div className="bg-green-100 relative">
+      <Image src="/logo.png" alt="" className="h-full w-auto aspect-square absolute opacity-75 right-20 z-10" width={516} height={516} />
+      <div className="container relative mx-auto py-12 px-4 sm:px-6 lg:px-8 z-20">
         <h1 className="text-4xl sm:text-5xl md:text-6xl font-extrabold leading-tight text-gray-900 mb-8">
           Welcome to <span className="text-red-500">RC Technique</span> , the phone and computer repair experts.
         </h1>
