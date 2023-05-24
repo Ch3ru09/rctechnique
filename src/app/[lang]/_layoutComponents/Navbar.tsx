@@ -11,22 +11,22 @@ export default function Navbar({ lang }: { lang: string }) {
           <Logo lang={lang} />
           <ul className="flex space-x-4">
             <li>
-              <Link href="/" className="text-gray-800 hover:text-gray-500 hover:drop-shadow-lg">
+              <Link href={`/${lang}/`} className="text-gray-800 hover:text-gray-500 hover:drop-shadow-lg">
                 Home
               </Link>
             </li>
             <li>
-              <Link href="/services" className="text-gray-800 hover:text-gray-600">
+              <Link href={`/${lang}/services`} className="text-gray-800 hover:text-gray-600">
                 Services
               </Link>
             </li>
             <li>
-              <Link href="/faq" className="text-gray-800 hover:text-gray-600">
+              <Link href={`/${lang}/faq`} className="text-gray-800 hover:text-gray-600">
                 FAQ
               </Link>
             </li>
             <li>
-              <Link href="/contact" className="text-gray-800 hover:text-gray-600">
+              <Link href={`/${lang}/contact`} className="text-gray-800 hover:text-gray-600">
                 Contact
               </Link>
             </li>
