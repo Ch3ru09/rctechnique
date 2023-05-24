@@ -36,11 +36,6 @@ export default function ServicesPage() {
           </div>
         ))}
       </div>
-      <div className="mt-4">
-        <Link href="/" className="text-blue-500 hover:underline">
-          Go back to Home
-        </Link>
-      </div>
     </div>
   );
 }

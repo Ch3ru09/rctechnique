@@ -4,21 +4,21 @@ export default function SectionTestimonials() {
   const testimonials = [
     {
       id: 1,
-      name: "John Doe",
-      quote: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec ac gravida velit. Suspendisse potenti.",
-      image: "/images/testimonial-1.jpg",
+      name: "laurent GEMIGNANI",
+      quote: "Vraiment très efficace et sympathique en plus ! Je le recommande",
+      image: "/testimonial/1.png",
     },
     {
       id: 2,
-      name: "Jane Doe",
-      quote: "Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Quisque pharetra semper nunc id pellentesque.",
-      image: "/images/testimonial-2.jpg",
+      name: "马世全",
+      quote: "Super bon service, Super bonne technologie",
+      image: "/testimonial/2.png",
     },
     {
       id: 3,
-      name: "Bob Smith",
-      quote: "Proin at condimentum tellus. Nulla facilisi. Pellentesque euismod rhoncus leo, id efficitur augue congue vel.",
-      image: "/images/testimonial-3.jpg",
+      name: "zongmin pang2022",
+      quote: "Bonne technique, bon service, magnifique prix",
+      image: "/testimonial/3.png",
     },
   ];
 

@@ -9,7 +9,7 @@ export default function SectionServices() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
           <div className="bg-gray-50 shadow-lg rounded-lg p-6">
             <div className="mb-4">
-              <Image src="/service-2.jpg" alt="Service 2" width={300} height={200} className="rounded-md" />
+              <Image src="/logo.png" alt="Service 2" className="rounded-md" width={300} height={200} />
             </div>
             <h3 className="text-xl font-bold mb-2">Back Glass Replacement</h3>
             <p className="text-gray-700 leading-relaxed mb-4">Cracked back glass, doesn't have the shine it had before? We can replace it quickly and affordably.</p>
@@ -19,7 +19,7 @@ export default function SectionServices() {
           </div>
           <div className="bg-gray-50 shadow-lg rounded-lg p-6">
             <div className="mb-4">
-              <Image src="/service-1.jpg" alt="Service 1" width={300} height={200} className="rounded-md" />
+              <Image src="/logo.png" alt="Service 1" className="rounded-md" width={300} height={200} />
             </div>
             <h3 className="text-xl font-bold mb-2">Screen Repair</h3>
             <p className="text-gray-700 leading-relaxed mb-4">We can fix any cracked or damaged phone screen, whether it's an iPhone, Samsung, or any other company or model.</p>
@@ -29,7 +29,7 @@ export default function SectionServices() {
           </div>
           <div className="bg-gray-50 shadow-lg rounded-lg p-6">
             <div className="mb-4">
-              <Image src="/service-3.jpg" alt="Service 3" width={300} height={200} className="rounded-md" />
+              <Image src="/logo.png" alt="Service 3" className="rounded-md" width={300} height={200} />
             </div>
             <h3 className="text-xl font-bold mb-2">And Much More...</h3>
             <p className="text-gray-700 leading-relaxed mb-4">We do not limit ourselves to these 2 services. See more on our services page to see more.</p>
@@ -42,3 +42,4 @@ export default function SectionServices() {
     </section>
   );
 }
+
