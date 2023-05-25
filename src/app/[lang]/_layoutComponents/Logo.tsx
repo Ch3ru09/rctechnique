@@ -6,7 +6,7 @@ import Image from "next/image";
 
 export default function Logo({ lang }: { lang: string }) {
   let location = usePathname();
-  let ref = useRef<Element | null>(null);
+  let ref = useRef(null);
   location = getNoLocaleURL(location);
 
   useEffect(() => {
