@@ -1,5 +1,47 @@
 {
   "intro": {
-    "title": "Bienvenue à RC Technique , les experts de réparation de téléphones et de ordinateurs."
+    "title": "Bienvenue à RC Technique , les experts de réparation de téléphones et de ordinateurs.",
+    "description": "Nous savons qu'avoir une écran brisé ou une batterie qui ne fonctionne pas peut être frustrant, c'est pourquoi nous y avons fait notre mission de fournir un service de réparation de téléphone et d'ordinateur qui est fiable, efficace et abordable",
+    "button": "Nous contacter"
+  },
+  "services": {
+    "title": "Nos Principaux Services",
+    "first": {
+      "title": "Remplacement de Verre Arrière",
+      "description": "Un verre arrière brisé, il n'a plus la brillance qu'il avait avant? Nous pouvons le remplacer rapidement et abordablement.",
+      "button": "Apprendre plus"
+    },
+    "second": {
+      "title": "Remplacement d'écran",
+      "description": "Nous pouvons remplacer n'importe quel écran craqué ou endommagé, que ce soit un Iphone, un Huawei, ou toute autre compagnie ou modèle",
+      "button": "Apprendre plus"
+    },
+    "third": {
+      "title": "Et plus encore...",
+      "description": "Nous ne nous limitons pas à ces deux services. Vous pouvez voir plus sur notre page \"services\". ",
+      "button": "Voir tous les services"
+    }
+  },
+  "testimonials": {
+    "title": "Témoignages",
+    "subtitle": "Ce que nos clients pensent",
+    "first": {
+      "name": "laurent GEMIGNANI",
+      "description": "Vraiment très efficace et sympathique en plus ! Je le recommande"
+    },
+    "second": {
+      "name": "马世全",
+      "description": "Super bon service, Super bonne technologie"
+    },
+    "third": {
+      "name": "zongmin pang2022",
+      "description": "Bonne technique, bon service, magnifique prix"
+    }
+  },
+  "contact": {
+    "title": "Nous Contacter",
+    "email": "Courriel",
+    "address": "Adresse",
+    "phone": "Téléphone"
   }
 }
