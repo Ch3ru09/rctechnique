@@ -5,6 +5,7 @@ const dictionaries = {
   nl: () => import("./fr.json").then((module) => module.default),
 };
 
-export default async function getDictionary(locale: string) {
+export default async function getDictionary(locale) {
   return dictionaries[locale]();
 }
+
