@@ -9,14 +9,6 @@ export default function Logo({ lang }: { lang: string }) {
   let ref = useRef(null);
   location = getNoLocaleURL(location);
 
-  useEffect(() => {
-    if (location != "/") {
-      ref.current?.classList.remove("invisible");
-      return;
-    }
-    ref.current?.classList.add("invisible");
-  }, [location]);
-
   return <Image src="/logo.png" alt="" className="h-full w-auto aspect-square" ref={ref} width={50} height={50} />;
 }
 

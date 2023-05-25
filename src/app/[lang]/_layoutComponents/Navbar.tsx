@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import Logo from "./Logo";
-import { usePathname } from "next/navigation";
+import LanguageSelect from "./LangSelect";
 
 export default function Navbar({ lang }: { lang: string }) {
   return (
@@ -27,9 +27,7 @@ export default function Navbar({ lang }: { lang: string }) {
               </Link>
             </li>
             <li>
-              <Link href={`/en/`} className="text-gray-800 hover:text-gray-600">
-                {lang}
-              </Link>
+              <LanguageSelect lang={lang} />
             </li>
           </ul>
         </div>
