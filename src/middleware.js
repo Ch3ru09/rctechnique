@@ -22,20 +22,21 @@ export function middleware(request) {
 
   // Redirect if there is no locale
   if (pathnameIsMissingLocale) {
-    // const locale = getLocale(request);
+    const locale = getLocale(request);
 
-    const locale = "fr";
     // e.g. incoming request is /products
     // The new URL is now /en-US/products
-    console.log(">> " + new URL(`/${locale}${pathname}`, request.nextUrl.href));
-    return NextResponse.redirect(new URL(`/${locale}${pathname}`, request.nextUrl.href));
-    // return NextResponse.redirect(new URL(`/${locale}/${pathname}`, request.url));
+    // return NextResponse.redirect(new URL(`/${locale}${pathname}`, request.nextUrl.href));
+    return NextResponse.redirect(new URL(`/${locale}/${pathname}`, request.url));
   }
 }
 
 export const config = {
   matcher: [
-    "/:path*",
+    // Skip all internal paths (_next)
+    "/((?!_next).*)",
+    // Optional: only run on root (/) URL
+    // '/'
   ],
 };
 

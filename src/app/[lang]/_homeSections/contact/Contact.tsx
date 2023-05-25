@@ -1,26 +1,27 @@
 import Link from "next/link";
+import type { Dict } from "../../_homeDictionnaries/getDictionary";
 
-export default function SectionContact() {
+export default function SectionContact({ dict }: { dict: Dict["contact"] }) {
   return (
     <section className="w-full py-20 bg-gray-100">
       <div className="mx-auto w-3/5">
-        <h2 className="text-3xl md:text-4xl font-bold mb-20 text-center">Contact Us</h2>
+        <h2 className="text-3xl md:text-4xl font-bold mb-20 text-center">{dict.title}</h2>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           <div className="md:col-span-1 flex flex-col gap-10">
             <div>
-              <h3 className="text-xl font-bold mb-4">Email</h3>
+              <h3 className="text-xl font-bold mb-4">{dict.email}</h3>
               <Link className="text-gray-700 after:content-['↗'] after:text-xs" href="mailto:rctechniques@gmail.com" target="_blank">
                 rctechniques@gmail.com
               </Link>
             </div>
             <div>
-              <h3 className="text-xl font-bold mb-4">Address</h3>
+              <h3 className="text-xl font-bold mb-4">{dict.address}</h3>
               <Link className="text-gray-700 after:content-['↗'] after:text-xs" href="//www.google.com/maps/place/RCtechnique/@45.4440989,-73.4734341,15z/data=!4m6!3m5!1s0x4cc90fbe5cc265cd:0x942c99d5cd89daca!8m2!3d45.4440989!4d-73.4734341!16s%2Fg%2F11jdb8996j" target="_blank">
                 8500 Bd Taschereau Unit - 9, Brossard, QC, J4X 2T4
               </Link>
             </div>
             <div>
-              <h3 className="text-xl font-bold mb-4">Phone</h3>
+              <h3 className="text-xl font-bold mb-4">{dict.phone}</h3>
               <Link className="text-gray-700 after:content-['↗'] after:text-xs" href="tel:5145628688" target="_blank">
                 (514)-562-8688
               </Link>
