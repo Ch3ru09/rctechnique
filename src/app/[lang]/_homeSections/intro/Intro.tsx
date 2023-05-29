@@ -3,6 +3,7 @@ import Link from "next/link";
 import type { Dict } from "../../_homeDictionnaries/getDictionary";
 
 import LogoImage from "../../_assets/logo.png";
+import ContactsButton from "./ContactsButton";
 
 export default function SectionIntro({ dict }: { dict: Dict["intro"] }) {
   return (
@@ -13,10 +14,9 @@ export default function SectionIntro({ dict }: { dict: Dict["intro"] }) {
           {dict.title.p1} <span className="text-red-500">RC Technique</span> {dict.title.p2}
         </h1>
         <p className="text-xl text-gray-600 mb-8">{dict.description}</p>
-        <Link href="/#contactTitle" className="inline-block bg-blue-500 hover:bg-blue-600 text-gray-100 font-bold py-4 px-8 rounded-lg transition-colors duration-300">
-          {dict.button}
-        </Link>
+        <ContactsButton>{dict.button}</ContactsButton>
       </div>
     </div>
   );
 }
+

@@ -1,0 +1,36 @@
+{
+  "faqs": [
+    {
+      "question": "How long will it take to repair my cell phone?",
+      "answer": "The repair time depends on the specific issue with your cell phone. Simple repairs like screen replacements can typically be done within a few hours, while more complex issues may take longer. Our technicians will provide you with an estimated repair time after assessing your device."
+    },
+    {
+      "question": "Do you offer a warranty on cell phone repairs?",
+      "answer": "Yes, we offer a warranty on our cell phone repairs. The length of the warranty may vary depending on the type of repair and the specific parts used. Our warranty typically covers any issues related to the repair performed and is usually of 1 month."
+    },
+    {
+      "question": "Can you repair water-damaged cell phones?",
+      "answer": "Yes, we specialize in repairing water-damaged cell phones. We use advanced techniques and equipment to dry out and clean the device to minimize damage. However, the success of water damage repair depends on the severity of the damage and the time taken to bring the device for repair."
+    },
+    {
+      "question": "Will repairing my cell phone void its warranty?",
+      "answer": "In some cases, third-party repairs can void the manufacturer's warranty. However, we strive to provide high-quality repairs that do not void the warranty. We use genuine parts whenever possible and employ skilled technicians who follow industry standards to ensure your warranty remains intact."
+    },
+    {
+      "question": "How much will the cell phone repair cost?",
+      "answer": "The cost of the repair will depend on the specific issue with your cell phone and the required replacement parts. Our technicians will diagnose the problem and provide you with an accurate cost estimate before proceeding with the repair. We strive to offer competitive and transparent pricing."
+    },
+    {
+      "question": "Can you repair cell phones from all brands?",
+      "answer": "Yes, we offer cell phone repairs for a wide range of brands, including popular ones like Apple, Samsung, Google, LG, and more. Our technicians are trained to handle various brands and models to ensure efficient and reliable repairs."
+    },
+    {
+      "question": "Do I need to make an appointment for cell phone repair?",
+      "answer": "While appointments are not always necessary, we recommend scheduling one to ensure prompt service. Making an appointment allows us to allocate dedicated time for your repair and reduces waiting times."
+    },
+    {
+      "question": "What should I do if my cell phone is not turning on?",
+      "answer": "If your cell phone is not turning on, first try charging it with a different cable and power source. If that doesn't work, bring it to our repair center for diagnosis. Our technicians will assess the issue and recommend the necessary repairs."
+    }
+  ]
+}

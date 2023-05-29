@@ -1,0 +1,36 @@
+{
+  "faqs": [
+    {
+      "question": "Combien de temps faut-il pour réparer mon téléphone portable ?",
+      "answer": "Le temps de réparation dépend du problème spécifique de votre téléphone portable. Les réparations simples telles que le remplacement de l'écran peuvent généralement être effectuées en quelques heures, tandis que les problèmes plus complexes peuvent prendre plus de temps. Nos techniciens vous fourniront une estimation du temps de réparation après avoir évalué votre appareil."
+    },
+    {
+      "question": "Offrez-vous une garantie sur les réparations de téléphones portables ?",
+      "answer": "Oui, nous offrons une garantie sur nos réparations de téléphones portables. La durée de la garantie peut varier en fonction du type de réparation et des pièces spécifiques utilisées. Notre garantie couvre généralement tout problème lié à la réparation effectuée et est généralement de 1 mois."
+    },
+    {
+      "question": "Pouvez-vous réparer des téléphones portables endommagés par l'eau ?",
+      "answer": "Oui, nous sommes spécialisés dans la réparation de téléphones portables endommagés par l'eau. Nous utilisons des techniques et un équipement avancés pour sécher et nettoyer l'appareil afin de minimiser les dégâts. Cependant, la réussite de la réparation des dégâts d'eau dépend de la gravité des dommages et du délai de prise en charge de l'appareil pour la réparation."
+    },
+    {
+      "question": "La réparation de mon téléphone portable annulera-t-elle sa garantie ?",
+      "answer": "Dans certains cas, les réparations effectuées par des tiers peuvent annuler la garantie du fabricant. Cependant, nous nous efforçons de fournir des réparations de haute qualité qui ne compromettent pas la garantie. Nous utilisons des pièces d'origine lorsque cela est possible et employons des techniciens qualifiés qui respectent les normes de l'industrie pour que votre garantie reste intacte."
+    },
+    {
+      "question": "Combien coûtera la réparation de mon téléphone portable ?",
+      "answer": "Le coût de la réparation dépend du problème spécifique de votre téléphone portable et des pièces de rechange nécessaires. Nos techniciens diagnostiqueront le problème et vous fourniront une estimation précise du coût avant de procéder à la réparation. Nous nous efforçons d'offrir des prix compétitifs et transparents."
+    },
+    {
+      "question": "Pouvez-vous réparer des téléphones portables de toutes les marques ?",
+      "answer": "Oui, nous proposons des réparations de téléphones portables pour un large éventail de marques, y compris des marques populaires telles qu'Apple, Samsung, Google, LG, et bien d'autres. Nos techniciens sont formés pour prendre en charge différentes marques et modèles afin de garantir des réparations efficaces et fiables."
+    },
+    {
+      "question": "Dois-je prendre rendez-vous pour la réparation de mon téléphone portable ?",
+      "answer": "Bien que les rendez-vous ne soient pas toujours nécessaires, nous vous recommandons d'en prendre un pour un service rapide. La prise de rendez-vous nous permet de vous allouer un temps dédié pour la réparation et réduit les temps d'attente."
+    },
+    {
+      "question": "Que dois-je faire si mon téléphone portable ne s'allume pas ?",
+      "answer": "Si votre téléphone portable ne s'allume pas, essayez d'abord de le charger avec un câble et une source d'alimentation différents. Si cela ne fonctionne pas, apportez-le à notre centre de réparation pour un diagnostic. Nos techniciens évalueront le problème et vous recommanderont les réparations nécessaires."
+    }
+  ]
+}

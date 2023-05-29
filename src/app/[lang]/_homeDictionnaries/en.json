@@ -1,51 +1,52 @@
 {
-    "intro": {
-      "title": {
-        "p1": "Welcome to",
-        "p2":", the phone and computer repair experts."
-      },
-      "description": "We know that having a broken screen or a broken battery can be frustrating, which is why we've dedicated ourselves to providing cellphone and computer repair that are reliable, efficient, and affordable.",
-      "button": "Get in touch"
+  "intro": {
+    "title": {
+      "p1": "Welcome to",
+      "p2": ", the phone and computer repair experts."
     },
-    "services": {
-      "title": "Our Main Services",
-      "s1": {
+    "description": "We know that having a broken screen or a broken battery can be frustrating, which is why we've dedicated ourselves to providing cellphone and computer repair that are reliable, efficient, and affordable.",
+    "button": "Get in touch"
+  },
+  "services": {
+    "title": "Our Main Services",
+    "services": [
+      {
         "title": "Back Glass Replacement",
         "description": "A cracked back glass, it doesn't have the shine it had before? We can replace it quickly and affordably.",
         "button": "Learn more"
       },
-      "s2": {
+      {
         "title": "Screen Repair",
         "description": "We can fix any cracked or damaged phone screen, whether it's an iPhone, Samsung, or any other company or model.",
         "button": "Learn more"
       },
-      "s3": {
+      {
         "title": "And Much More...",
         "description": "We do not limit ourselves to these 2 services. See more on our services page to see more.",
         "button": "See all services"
       }
+    ]
+  },
+  "testimonials": {
+    "title": "Testimonials",
+    "subtitle": "What our customers are saying",
+    "t1": {
+      "name": "laurent GEMIGNANI",
+      "description": "Very very efficient and friendly also ! I recommend it"
     },
-    "testimonials": {
-      "title": "Testimonials",
-      "subtitle": "What our customers are saying",
-      "t1": {
-        "name": "laurent GEMIGNANI",
-        "description": "Very very efficient and friendly also ! I recommend it"
-      },
-      "t2": {
-        "name": "马世全",
-        "description": "Super good service, Super good technology"
-      },
-      "t3": {
-        "name": "zongmin pang2022",
-        "description": "Good technique, good service, magnificent prix"
-      }
+    "t2": {
+      "name": "马世全",
+      "description": "Super good service, Super good technology"
     },
-    "contact": {
-      "title": "Contact Us",
-      "email": "Email",
-      "address": "Address",
-      "phone": "Phone"
+    "t3": {
+      "name": "zongmin pang2022",
+      "description": "Good technique, good service, magnificent prix"
     }
+  },
+  "contact": {
+    "title": "Contact Us",
+    "email": "Email",
+    "address": "Address",
+    "phone": "Phone"
   }
-  
+}
