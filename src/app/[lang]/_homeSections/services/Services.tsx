@@ -2,6 +2,8 @@ import Image from "next/image";
 import Link from "next/link";
 import type { Dict } from "../../_homeDictionnaries/getDictionary";
 
+import LogoImage from "../../_assets/logo.png";
+
 export default function SectionServices({ dict }: { dict: Dict["services"] }) {
   return (
     <section className="bg-gray-100 py-16">
@@ -10,7 +12,7 @@ export default function SectionServices({ dict }: { dict: Dict["services"] }) {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
           <div className="bg-gray-50 shadow-lg rounded-lg p-6">
             <div className="mb-4">
-              <Image src="/logo.png" alt="Service 2" className="rounded-md" width={300} height={200} />
+              <Image src={LogoImage} alt="Service 2" className="rounded-md" width={300} height={200} />
             </div>
             <h3 className="text-xl font-bold mb-2">{dict.s1.title}</h3>
             <p className="text-gray-700 leading-relaxed mb-4">{dict.s1.description}</p>
@@ -20,7 +22,7 @@ export default function SectionServices({ dict }: { dict: Dict["services"] }) {
           </div>
           <div className="bg-gray-50 shadow-lg rounded-lg p-6">
             <div className="mb-4">
-              <Image src="/logo.png" alt="Service 1" className="rounded-md" width={300} height={200} />
+              <Image src={LogoImage} alt="Service 1" className="rounded-md" width={300} height={200} />
             </div>
             <h3 className="text-xl font-bold mb-2">{dict.s2.title}</h3>
             <p className="text-gray-700 leading-relaxed mb-4">{dict.s2.description}</p>
@@ -30,7 +32,7 @@ export default function SectionServices({ dict }: { dict: Dict["services"] }) {
           </div>
           <div className="bg-gray-50 shadow-lg rounded-lg p-6">
             <div className="mb-4">
-              <Image src="/logo.png" alt="Service 3" className="rounded-md" width={300} height={200} />
+              <Image src={LogoImage} alt="Service 3" className="rounded-md" width={300} height={200} />
             </div>
             <h3 className="text-xl font-bold mb-2">{dict.s3.title}</h3>
             <p className="text-gray-700 leading-relaxed mb-4">{dict.s3.description}</p>
@@ -43,4 +45,3 @@ export default function SectionServices({ dict }: { dict: Dict["services"] }) {
     </section>
   );
 }
-

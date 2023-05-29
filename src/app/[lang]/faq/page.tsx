@@ -1,6 +1,7 @@
 "use client";
 
 import { type CSSProperties, useState } from "react";
+import type { Metadata } from "next";
 
 export default function FAQPage() {
   const faqs = [
@@ -42,8 +43,7 @@ export default function FAQPage() {
                 onClick={() => {
                   setOpened((s) => !s);
                 }}
-                key={faq.id}
-              >
+                key={faq.id}>
                 <h2 className="flex flex-row justify-between items-center font-semibold p-3 cursor-pointer">
                   <span>{faq.question}</span>
                   <svg className={`fill-current text-purple-700 h-6 w-6 transform transition-transform duration-[250ms] ease-in-out`} viewBox="0 0 20 20" style={{ "--tw-rotate": opened ? "180deg" : "0deg" } as CSSProperties}>
@@ -62,3 +62,7 @@ export default function FAQPage() {
   );
 }
 
+export const metadata: Metadata = {
+  title: "RC Technique - FAQ",
+  description: "We provide phone and computer repair services that are reliable, efficient, and affordable.",
+};

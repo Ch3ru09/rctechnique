@@ -3,6 +3,8 @@
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 
+// TODO: make language focusable and tabable
+
 export default function LanguageSelect({ lang }: { lang: string }) {
   const location = usePathname();
 
@@ -37,4 +39,3 @@ export default function LanguageSelect({ lang }: { lang: string }) {
     </div>
   );
 }
-

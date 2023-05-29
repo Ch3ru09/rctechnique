@@ -5,7 +5,9 @@ export default function SectionContact({ dict }: { dict: Dict["contact"] }) {
   return (
     <section className="w-full py-20 bg-gray-100">
       <div className="mx-auto w-3/5">
-        <h2 className="text-3xl md:text-4xl font-bold mb-20 text-center">{dict.title}</h2>
+        <h2 className="text-3xl md:text-4xl font-bold mb-20 text-center" id="contactTitle">
+          {dict.title}
+        </h2>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           <div className="md:col-span-1 flex flex-col gap-10">
             <div>
@@ -35,4 +37,3 @@ export default function SectionContact({ dict }: { dict: Dict["contact"] }) {
     </section>
   );
 }
-

@@ -1,5 +1,5 @@
+import type { Metadata } from "next";
 import React from "react";
-import Link from "next/link";
 
 const services = [
   {
@@ -40,3 +40,7 @@ export default function ServicesPage() {
   );
 }
 
+export const metadata: Metadata = {
+  title: "RC Technique - Services",
+  description: "We provide phone and computer repair services that are reliable, efficient, and affordable.",
+};

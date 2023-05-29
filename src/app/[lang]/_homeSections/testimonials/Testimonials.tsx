@@ -1,19 +1,23 @@
-import Image from "next/image";
+import Image, { type StaticImageData } from "next/image";
 import type { Dict } from "../../_homeDictionnaries/getDictionary";
+
+import P1 from "./icons/1.png";
+import P2 from "./icons/2.png";
+import P3 from "./icons/3.png";
 
 export default function SectionTestimonials({ dict }: { dict: Dict["testimonials"] }) {
   const testimonials = [
     {
       id: 1,
-      image: "/testimonial/1.png",
+      image: P1,
     },
     {
       id: 2,
-      image: "/testimonial/2.png",
+      image: P2,
     },
     {
       id: 3,
-      image: "/testimonial/3.png",
+      image: P3,
     },
   ];
 
@@ -60,8 +64,7 @@ export function TestimonialCard({ testimonial, dict }: CardProps) {
 type CardProps = {
   testimonial: {
     id: number;
-    image: string;
+    image: StaticImageData;
   };
   dict: any;
 };
-
