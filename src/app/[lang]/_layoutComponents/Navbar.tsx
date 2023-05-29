@@ -11,7 +11,7 @@ export default function Navbar({ lang }: { lang: string }) {
         <div className="flex justify-between items-center">
           <Logo lang={lang} />
           <ul className="flex space-x-4">
-            <li>
+            {/* <li>
               <Link href={`/${lang}/`} className="text-gray-800 hover:text-gray-500 hover:drop-shadow-lg">
                 Home
               </Link>
@@ -25,7 +25,7 @@ export default function Navbar({ lang }: { lang: string }) {
               <Link href={`/${lang}/faq`} className="text-gray-800 hover:text-gray-600">
                 FAQ
               </Link>
-            </li>
+            </li> */}
             <li className="h-full">
               <LanguageSelect lang={lang} />
             </li>
