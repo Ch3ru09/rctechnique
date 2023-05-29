@@ -8,7 +8,7 @@ export default function SectionServices({ dict }: { dict: Dict["services"] }) {
   return (
     <section className="bg-gray-100 py-16">
       <div className="container mx-auto">
-        <h2 className="text-3xl md:text-4xl font-bold mb-8 text-center">Our Main Services</h2>
+        <h2 className="text-3xl md:text-4xl font-bold mb-8 text-center">{dict.title}</h2>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
           <div className="bg-gray-50 shadow-lg rounded-lg p-6">
             <div className="mb-4">
