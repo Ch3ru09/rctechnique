@@ -26,7 +26,7 @@ export default function Navbar({ lang }: { lang: string }) {
                 FAQ
               </Link>
             </li>
-            <li>
+            <li className="h-full">
               <LanguageSelect lang={lang} />
             </li>
           </ul>
