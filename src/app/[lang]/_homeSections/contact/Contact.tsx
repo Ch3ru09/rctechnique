@@ -19,7 +19,7 @@ export default function SectionContact({ dict }: { dict: Dict["contact"] }) {
             <div>
               <h3 className="text-xl font-bold mb-4">{dict.address}</h3>
               <Link className="text-gray-700 after:content-['↗'] after:text-xs" href="//www.google.com/maps/place/RCtechnique/@45.4440989,-73.4734341,15z/data=!4m6!3m5!1s0x4cc90fbe5cc265cd:0x942c99d5cd89daca!8m2!3d45.4440989!4d-73.4734341!16s%2Fg%2F11jdb8996j" target="_blank">
-                8500 Bd Taschereau Unit - 9, Brossard, QC, J4X 2T4
+                Unit-9 8500 Bd Taschereau, Brossard, QC, J4X 2T4
               </Link>
             </div>
             <div>
