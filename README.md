@@ -2,4 +2,4 @@
 
 It is built using Next.js and Tailwindcss
 
-Website deployed to the company's domain [rctechniques.com](rctechniques.com)
+Website deployed to the company's domain [rctechniques.com](https://www.rctechniques.com)
