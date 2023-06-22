@@ -30,7 +30,7 @@ export default function ServicesPage() {
       <h1 className="text-3xl font-bold mb-4">Phone Repair Services</h1>
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
         {services.map((service) => (
-          <div className="bg-gray-50 shadow-lg rounded-lg p-6" key={service.id}>
+          <div className="bg-gray-50 shadow-lg rounded-lg p-6" key={service.id} id={service.id.toString()}>
             <h3 className="text-xl font-bold mb-2">{service.title}</h3>
             <p className="text-gray-700 leading-relaxed mb-4">{service.description}</p>
           </div>
