@@ -15,6 +15,7 @@ function getLocale(request) {
 
 export function middleware(request) {
   if (request.nextUrl.pathname == "/icon.png") return;
+  if (request.nextUrl.pathname.split(".").at(-1) == "jpg") return;
 
   // Check if there is any supported locale in the pathname
   const pathname = request.nextUrl.pathname;
@@ -39,4 +40,3 @@ export const config = {
     // '/'
   ],
 };
-

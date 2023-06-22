@@ -9,6 +9,9 @@ module.exports = {
       backgroundImage: {
         "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
         "gradient-conic": "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
+        backglass: "linear-gradient(to bottom, #eee5, #000f), url('/repairs/cracked-back.jpg')",
+        frontglass: "linear-gradient(to bottom, #eee5, #000f), url('/repairs/cracked-front.jpg')",
+        ram: "linear-gradient(to bottom, #eee5, #000f), url('/repairs/ram.jpg')",
       },
       screens: {
         "2xs": "340px",
@@ -46,4 +49,3 @@ module.exports = {
   },
   plugins: [],
 };
-

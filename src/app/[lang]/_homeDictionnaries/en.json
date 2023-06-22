@@ -13,17 +13,20 @@
       {
         "title": "Back Glass Replacement",
         "description": "A cracked back glass, it doesn't have the shine it had before? We can replace it quickly and affordably.",
-        "button": "Learn more"
+        "button": "Learn more",
+        "image": "backglass"
       },
       {
         "title": "Screen Repair",
         "description": "We can fix any cracked or damaged phone screen, whether it's an iPhone, Samsung, or any other company or model.",
-        "button": "Learn more"
+        "button": "Learn more",
+        "image": "frontglass"
       },
       {
         "title": "And Much More...",
         "description": "We do not limit ourselves to these 2 services. See more on our services page to see more.",
-        "button": "See all services"
+        "button": "See all services",
+        "image": "ram"
       }
     ]
   },
