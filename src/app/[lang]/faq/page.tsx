@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import Dropdown from "./Dropdown";
-import getDictionary from "./faqDictionnaries/getDictionary";
+import getDictionary from "./_faqDictionnaries/getDictionary";
 
 export default async function FAQPage({ params: { lang } }: { params: { lang: string } }) {
   const dict = await getDictionary(lang);
