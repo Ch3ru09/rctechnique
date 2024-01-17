@@ -1,13 +1,14 @@
 "use client";
 
-import { usePathname } from "next/navigation";
+import { usePathname, useRouter } from "next/navigation";
 import { useEffect, useRef } from "react";
 import Image from "next/image";
 
-import LogoImage from "../_assets/logo.png";
+import LogoImage from "../assets/logo.png";
 
 export default function Logo({ lang }: { lang: string }) {
   let location = usePathname();
+  let router = useRouter();
 
   let ref = useRef(null);
   location = getNoLocaleURL(location);
@@ -20,9 +21,20 @@ export default function Logo({ lang }: { lang: string }) {
     }
   }, [location]);
 
-  return <Image src={LogoImage} alt="" className="h-full w-auto aspect-square invisible" ref={ref} width={50} height={50} />;
+  return (
+    <Image
+      src={LogoImage}
+      alt=""
+      className="h-full w-auto aspect-square invisible"
+      ref={ref}
+      width={50}
+      height={50}
+      onClick={() => {router.push("/")}}
+    />
+  );
 }
 
 function getNoLocaleURL(location: string) {
   return location.replace(/^(?:[^\/]*\/){2}\s*/, "/");
 }
+

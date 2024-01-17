@@ -1,13 +1,19 @@
 import type { Metadata } from "next";
 import dynamic from "next/dynamic";
-import getDictionary from "./_homeDictionnaries/getDictionary";
+import getDictionary from "./homeDictionnaries/getDictionary";
 
-const Services = dynamic(() => import("./_homeSections/services/Services"));
-const Testimonials = dynamic(() => import("./_homeSections/testimonials/Testimonials"));
-const Contact = dynamic(() => import("./_homeSections/contact/Contact"));
-const Intro = dynamic(() => import("./_homeSections/intro/Intro"));
+const Services = dynamic(() => import("./homeSections/services/Services"));
+const Testimonials = dynamic(
+  () => import("./homeSections/testimonials/Testimonials")
+);
+const Contact = dynamic(() => import("./homeSections/contact/Contact"));
+const Intro = dynamic(() => import("./homeSections/intro/Intro"));
 
-export default async function HomePage({ params: { lang } }: { params: { lang: string } }) {
+export default async function HomePage({
+  params: { lang },
+}: {
+  params: { lang: string };
+}) {
   const dict = await getDictionary(lang);
 
   return (
@@ -22,6 +28,7 @@ export default async function HomePage({ params: { lang } }: { params: { lang: s
 
 export const metadata: Metadata = {
   title: "RC Technique - Phone Repair",
-  description: "We provide phone and computer repair services that are reliable, efficient, and affordable.",
+  description:
+    "We provide phone and computer repair services that are reliable, efficient, and affordable.",
 };
 
