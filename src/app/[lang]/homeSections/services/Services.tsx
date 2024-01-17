@@ -1,15 +1,16 @@
 import Link from "next/link";
 
 import type { Dict } from "../../homeDictionnaries/getDictionary";
+import IconSpinner from "./IconSpinner";
 
 export default function SectionServices({ dict }: { dict: Dict["services"] }) {
   return (
-    <section className="bg-gray-100 py-16">
+    <section className="bg-gray-100 pb-16 pt-32">
       <div className="container mx-auto">
         <h2 className="text-3xl md:text-4xl font-bold mb-8 text-center">
           {dict.title}
         </h2>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
+        {/* <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
           {dict.services.map((dictionnary) => {
             return (
               <>
@@ -33,7 +34,8 @@ export default function SectionServices({ dict }: { dict: Dict["services"] }) {
               </>
             );
           })}
-        </div>
+        </div> */}
+        <IconSpinner />
       </div>
     </section>
   );

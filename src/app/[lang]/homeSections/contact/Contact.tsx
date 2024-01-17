@@ -14,6 +14,16 @@ export default function SectionContact({ dict }: { dict: Dict["contact"] }) {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           <div className="md:col-span-1 flex flex-col gap-10">
             <div>
+              <h3 className="text-xl font-bold mb-4">{dict.phone}</h3>
+              <Link
+                className="text-gray-700 after:content-['↗'] after:text-xs"
+                href="tel:5145628688"
+                target="_blank"
+              >
+                (514)-562-8688
+              </Link>
+            </div>
+            <div>
               <h3 className="text-xl font-bold mb-4">{dict.email}</h3>
               <Link
                 className="text-gray-700 after:content-['↗'] after:text-xs"
@@ -31,16 +41,6 @@ export default function SectionContact({ dict }: { dict: Dict["contact"] }) {
                 target="_blank"
               >
                 Unit-9 8500 Bd Taschereau, Brossard, QC, J4X 2T4
-              </Link>
-            </div>
-            <div>
-              <h3 className="text-xl font-bold mb-4">{dict.phone}</h3>
-              <Link
-                className="text-gray-700 after:content-['↗'] after:text-xs"
-                href="tel:5145628688"
-                target="_blank"
-              >
-                (514)-562-8688
               </Link>
             </div>
           </div>

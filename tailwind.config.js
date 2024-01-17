@@ -3,14 +3,21 @@ const colors = require("tailwindcss/colors");
 
 module.exports = {
   darkMode: "class",
-  content: ["./src/pages/**/*.{js,ts,jsx,tsx,mdx}", "./src/components/**/*.{js,ts,jsx,tsx,mdx}", "./src/app/**/*.{js,ts,jsx,tsx,mdx}"],
+  content: [
+    "./src/pages/**/*.{js,ts,jsx,tsx,mdx}",
+    "./src/components/**/*.{js,ts,jsx,tsx,mdx}",
+    "./src/app/**/*.{js,ts,jsx,tsx,mdx}",
+  ],
   theme: {
     extend: {
       backgroundImage: {
         "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
-        "gradient-conic": "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
-        backglass: "linear-gradient(to bottom, #eee5, #000f), url('/repairs/cracked-back.jpg')",
-        frontglass: "linear-gradient(to bottom, #eee5, #000f), url('/repairs/cracked-front.jpg')",
+        "gradient-conic":
+          "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
+        backglass:
+          "linear-gradient(to bottom, #eee5, #000f), url('/repairs/cracked-back.jpg')",
+        frontglass:
+          "linear-gradient(to bottom, #eee5, #000f), url('/repairs/cracked-front.jpg')",
         ram: "linear-gradient(to bottom, #eee5, #000f), url('/repairs/ram.jpg')",
       },
       screens: {
@@ -46,6 +53,19 @@ module.exports = {
         900: "#001133",
       },
     },
+    animation: {
+      orbit: "orbit 30s linear infinite",
+      "orbit-reverse": "orbit-reverse 30s linear infinite",
+    },
+    keyframes: {
+      orbit: {
+        "100%": { rotate: "1turn" },
+      },
+      "orbit-reverse": {
+        "100%": { rotate: "-1turn" },
+      },
+    },
   },
   plugins: [],
 };
+
