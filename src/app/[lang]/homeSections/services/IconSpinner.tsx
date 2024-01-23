@@ -23,20 +23,22 @@ export default function IconSpinner({
       <Image
         src={RepairImage}
         alt=""
-        className="h-[20%] w-auto"
+        className="h-32 w-auto"
         style={{ transform: "translate(-3px, -4px)" }}
       />
 
       <ul
         className={
-          "absolute h-20 w-20 origin-center transition-all duration-1000 rotate-0"
+          "absolute w-auto h-20 aspect-square origin-center transition-all duration-1000 rotate-0"
         }
-        style={{ rotate: `${(currentIcon * 360) / icons.length}deg` }}
+        style={{
+          rotate: `${(currentIcon * 360) / icons.length}deg`,
+        }}
       >
         {icons.map((icon, i) => {
           return (
             <li
-              className="absolute h-20 w-20 cursor-pointer"
+              className="absolute h-full w-auto aspect-square cursor-pointer"
               style={{ transform: getPosition(i, icons.length) }}
               key={i}
               onClick={() => {
@@ -49,7 +51,7 @@ export default function IconSpinner({
               <Image
                 src={icon}
                 alt=""
-                className="absolute w-full h-auto transition-all duration-1000 rotate-0"
+                className="absolute h-full w-auto aspect-square transition-all duration-1000 rotate-0"
                 style={{ rotate: `-${(currentIcon * 360) / icons.length}deg` }}
               />
             </li>
