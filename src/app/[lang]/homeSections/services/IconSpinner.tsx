@@ -1,6 +1,4 @@
-"use client";
-
-import { useEffect, useState } from "react";
+import { Dispatch, SetStateAction, useEffect, useState } from "react";
 import Image from "next/image";
 
 import RepairImage from "./icons/repair.png";
@@ -12,19 +10,11 @@ import ComputerIcon from "./icons/computer.png";
 import IpadIcon from "./icons/ipad.png";
 // <a href="https://www.flaticon.com/free-icons/gadget" title="gadget icons">Gadget icons created by Freepik - Flaticon</a>
 
-export default function IconSpinner() {
+export default function IconSpinner({
+  currentIcon,
+  setCurrentIcon,
+}: IconSpinnerProps) {
   const icons = [PhoneIcon, ComputerIcon, IpadIcon];
-
-  const ROTATION_INTERVAL_SECONDS = 5;
-
-  const [currentIcon, setCurrentIcon] = useState(0);
-
-  useEffect(() => {
-    const timer = setTimeout(() => {
-      setCurrentIcon((r) => r + 1);
-    }, 1000 * ROTATION_INTERVAL_SECONDS);
-    return () => clearTimeout(timer);
-  }, [currentIcon]);
 
   return (
     <div className="grid place-items-center relative my-64 transition-all w-1/4 duration-1000">
@@ -33,7 +23,7 @@ export default function IconSpinner() {
       <Image
         src={RepairImage}
         alt=""
-        className="h-40 w-auto"
+        className="h w-auto"
         style={{ transform: "translate(-3px, -4px)" }}
       />
 
@@ -80,4 +70,9 @@ function getPosition(index: number, total: number): string {
 
   return `translate(${x}rem, ${y}rem)`;
 }
+
+type IconSpinnerProps = {
+  currentIcon: number;
+  setCurrentIcon: Dispatch<SetStateAction<number>>;
+};
 
