@@ -23,7 +23,7 @@ export default function IconSpinner({
       <Image
         src={RepairImage}
         alt=""
-        className="h w-auto"
+        className="h-[20%] w-auto"
         style={{ transform: "translate(-3px, -4px)" }}
       />
 
