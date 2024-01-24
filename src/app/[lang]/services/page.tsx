@@ -6,11 +6,13 @@ const services = [
     id: 1,
     title: "Back Glass Replacement",
     description: "Replacement for broken back glass",
+    img: "cracked-back.jpg",
   },
   {
     id: 2,
     title: "Screen Repair",
     description: "Fix cracked or damaged screens",
+    
   },
   {
     id: 3,
@@ -30,9 +32,15 @@ export default function ServicesPage() {
       <h1 className="text-3xl font-bold mb-4">Phone Repair Services</h1>
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
         {services.map((service) => (
-          <div className="bg-gray-50 shadow-lg rounded-lg p-6" key={service.id} id={service.id.toString()}>
+          <div
+            className="bg-gray-50 shadow-lg rounded-lg p-6"
+            style={{ backgroundImage: `url("/reparis/${service.img}.jpg")}` }}
+            key={service.id}
+            id={service.id.toString()}>
             <h3 className="text-xl font-bold mb-2">{service.title}</h3>
-            <p className="text-gray-700 leading-relaxed mb-4">{service.description}</p>
+            <p className="text-gray-700 leading-relaxed mb-4">
+              {service.description}
+            </p>
           </div>
         ))}
       </div>
@@ -42,5 +50,6 @@ export default function ServicesPage() {
 
 export const metadata: Metadata = {
   title: "RC Technique - Services",
-  description: "We provide phone and computer repair services that are reliable, efficient, and affordable.",
+  description:
+    "We provide phone and computer repair services that are reliable, efficient, and affordable.",
 };
