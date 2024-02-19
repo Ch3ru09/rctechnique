@@ -1,19 +1,27 @@
-import ComputerPage from "./pages/ComputerPage";
-import IpadPage from "./pages/IpadPage";
-import PhonePage from "./pages/PhonePage";
+import { Dict } from "../../homeDictionnaries/getDictionary";
+import InfoPage from "./pages/InfoPage";
 
-export default function ServicesDisplay({ currentIcon }: ServicesDisplayProps) {
-  const pages = [<PhonePage />, <ComputerPage />, <IpadPage />];
+export default function ServicesDisplay({
+  currentIcon,
+  dictionnary,
+}: ServicesDisplayProps) {
+  const pages = ["Phone", "Computer", "Ipad"];
 
   return (
     <div className="h-1/2 ml-[20%] my-auto">
-      {pages[currentIcon % pages.length]}
+      {
+        <InfoPage
+          deviceIndex={currentIcon % pages.length}
+          dictionnary={dictionnary}
+        />
+      }
     </div>
   );
 }
 
 type ServicesDisplayProps = {
   currentIcon: number;
+  dictionnary: Dict["services"]["services"];
 };
 
 /* <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">

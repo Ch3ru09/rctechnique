@@ -27,7 +27,10 @@ export default function SectionServices({ dict }: { dict: Dict["services"] }) {
           currentIcon={currentIcon}
           setCurrentIcon={setCurrentIcon}
         />
-        <ServicesDisplay currentIcon={currentIcon} />
+        <ServicesDisplay
+          currentIcon={currentIcon}
+          dictionnary={dict["services"]}
+        />
       </div>
     </section>
   );

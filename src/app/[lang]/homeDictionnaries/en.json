@@ -11,10 +11,10 @@
     "title": "Our Main Services",
     "services": [
       {
-        "title": "Back Glass Replacement",
-        "description": "A cracked back glass, it doesn't have the shine it had before? We can replace it quickly and affordably.",
+        "title": "Phone Repair", // ! modify the services tab
+        "description": "A cracked back glass, no problem, we can change that. Broken screen? No problem! Leaking battery? We'll make it brand new",
         "button": "Learn more",
-        "image": "backglass"
+        "image": "phone"
       },
       {
         "title": "Screen Repair",
