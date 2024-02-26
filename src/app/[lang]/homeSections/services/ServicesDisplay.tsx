@@ -2,25 +2,20 @@ import { Dict } from "../../homeDictionnaries/getDictionary";
 import InfoPage from "./pages/InfoPage";
 
 export default function ServicesDisplay({
-  currentIcon,
+  currentIconIndex,
   dictionnary,
 }: ServicesDisplayProps) {
   const pages = ["Phone", "Computer", "Ipad"];
 
   return (
     <div className="h-1/2 ml-[20%] my-auto">
-      {
-        <InfoPage
-          deviceIndex={currentIcon % pages.length}
-          dictionnary={dictionnary}
-        />
-      }
+      {<InfoPage dictionnary={dictionnary[currentIconIndex % pages.length]} />}
     </div>
   );
 }
 
 type ServicesDisplayProps = {
-  currentIcon: number;
+  currentIconIndex: number;
   dictionnary: Dict["services"]["services"];
 };
 
@@ -49,3 +44,4 @@ type ServicesDisplayProps = {
     );
   })}
 </div> */
+
