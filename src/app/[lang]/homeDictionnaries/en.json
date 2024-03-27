@@ -11,14 +11,14 @@
     "title": "Our Main Services",
     "services": [
       {
-        "title": "Back Glass Replacement",
-        "description": "A cracked back glass, it doesn't have the shine it had before? We can replace it quickly and affordably.",
+        "title": "Phone Repair", 
+        "description": "A cracked back glass, no problem, we can change that. Broken screen? No problem! Leaking battery? We'll make it brand new",
         "button": "Learn more",
-        "image": "backglass"
+        "image": "phone"
       },
       {
-        "title": "Screen Repair",
-        "description": "We can fix any cracked or damaged phone screen, whether it's an iPhone, Samsung, or any other company or model.",
+        "title": "Computer Repair",
+        "description": "Fan not spinning? Software issues? We can fix that",
         "button": "Learn more",
         "image": "frontglass"
       },

@@ -12,16 +12,16 @@
 
     "services": [
       {
-        "title": "Remplacement de Verre Arrière",
-        "description": "Un verre arrière brisé, il n'a plus la brillance qu'il avait avant? Nous pouvons le remplacer rapidement et abordablement.",
+        "title": "Réparation de Téléphone",
+        "description": "Verre arrière brisé, pas de problème, on peut vous changer ça. Écran brisé? Pas de soucis! Batterie qui fuit? On peut vous le retourner comme si'l était neuf.",
         "button": "Apprendre plus",
-        "image": "backglass"
+        "image": "phone"
       },
       {
         "title": "Remplacement d'écran",
         "description": "Nous pouvons remplacer n'importe quel écran craqué ou endommagé, que ce soit un Iphone, un Huawei, ou toute autre compagnie ou modèle",
         "button": "Apprendre plus",
-        "image": "frontglass"
+        "image": "computer"
       },
       {
         "title": "Et plus encore...",
@@ -54,3 +54,4 @@
     "phone": "Téléphone"
   }
 }
+

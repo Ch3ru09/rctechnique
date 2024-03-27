@@ -11,8 +11,8 @@ import IpadIcon from "./icons/ipad.png";
 // <a href="https://www.flaticon.com/free-icons/gadget" title="gadget icons">Gadget icons created by Freepik - Flaticon</a>
 
 export default function IconSpinner({
-  currentIcon,
-  setCurrentIcon,
+  currentIconIndex,
+  setCurrentIconIndex,
 }: IconSpinnerProps) {
   const icons = [PhoneIcon, ComputerIcon, IpadIcon];
 
@@ -32,7 +32,7 @@ export default function IconSpinner({
           "absolute w-auto h-20 aspect-square origin-center transition-all duration-1000 rotate-0"
         }
         style={{
-          rotate: `${(currentIcon * 360) / icons.length}deg`,
+          rotate: `${(currentIconIndex * 360) / icons.length}deg`,
         }}
       >
         {icons.map((icon, i) => {
@@ -42,7 +42,7 @@ export default function IconSpinner({
               style={{ transform: getPosition(i, icons.length) }}
               key={i}
               onClick={() => {
-                setCurrentIcon(
+                setCurrentIconIndex(
                   (r) =>
                     r + ((icons.length - (r % icons.length) + i) % icons.length)
                 );
@@ -52,7 +52,9 @@ export default function IconSpinner({
                 src={icon}
                 alt=""
                 className="absolute h-full w-auto aspect-square transition-all duration-1000 rotate-0"
-                style={{ rotate: `-${(currentIcon * 360) / icons.length}deg` }}
+                style={{
+                  rotate: `-${(currentIconIndex * 360) / icons.length}deg`,
+                }}
               />
             </li>
           );
@@ -74,7 +76,7 @@ function getPosition(index: number, total: number): string {
 }
 
 type IconSpinnerProps = {
-  currentIcon: number;
-  setCurrentIcon: Dispatch<SetStateAction<number>>;
+  currentIconIndex: number;
+  setCurrentIconIndex: Dispatch<SetStateAction<number>>;
 };
 

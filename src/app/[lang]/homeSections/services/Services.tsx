@@ -6,16 +6,16 @@ import IconSpinner from "./IconSpinner";
 import ServicesDisplay from "./ServicesDisplay";
 
 export default function SectionServices({ dict }: { dict: Dict["services"] }) {
-  const [currentIcon, setCurrentIcon] = useState(0);
+  const [currentIconIndex, setCurrentIconIndex] = useState(0);
 
   const ROTATION_INTERVAL_SECONDS = 5;
 
   useEffect(() => {
     const timer = setTimeout(() => {
-      setCurrentIcon((r) => r + 1);
+      setCurrentIconIndex((r) => r + 1);
     }, 1000 * ROTATION_INTERVAL_SECONDS);
     return () => clearTimeout(timer);
-  }, [currentIcon]);
+  }, [currentIconIndex]);
 
   return (
     <section className="bg-gray-100 pb-16 pt-32">
@@ -24,10 +24,13 @@ export default function SectionServices({ dict }: { dict: Dict["services"] }) {
       </h2>
       <div className="container mx-auto flex flex-row">
         <IconSpinner
-          currentIcon={currentIcon}
-          setCurrentIcon={setCurrentIcon}
+          currentIconIndex={currentIconIndex}
+          setCurrentIconIndex={setCurrentIconIndex}
         />
-        <ServicesDisplay currentIcon={currentIcon} />
+        <ServicesDisplay
+          currentIconIndex={currentIconIndex}
+          dictionnary={dict["services"]}
+        />
       </div>
     </section>
   );

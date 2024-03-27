@@ -21,7 +21,12 @@
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
-.next/
 
 # bun
 bun.lockb
+
+# next
+/.next
+
+# pnpm
+pnpm-lock.yaml
