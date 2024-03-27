@@ -35,4 +35,3 @@ export default function SectionServices({ dict }: { dict: Dict["services"] }) {
     </section>
   );
 }
-

@@ -8,7 +8,7 @@ export default function ServicesDisplay({
   const pages = ["Phone", "Computer", "Ipad"];
 
   return (
-    <div className="h-1/2 ml-[20%] my-auto">
+    <div className="h-1/2 ml-[20%] my-auto relative w-[50%]">
       {<InfoPage dictionnary={dictionnary[currentIconIndex % pages.length]} />}
     </div>
   );
@@ -44,4 +44,3 @@ type ServicesDisplayProps = {
     );
   })}
 </div> */
-

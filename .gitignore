@@ -26,4 +26,7 @@ yarn-error.log*
 bun.lockb
 
 # next
-.next/
+/.next
+
+# pnpm
+pnpm-lock.yaml

@@ -2,7 +2,7 @@
   --bg-white-100: #eeeeee;
   --bg-primary-200: #b5f570;
   --bg-primary-400: #88ef1a;
-  --bg-secondary-400: #DB3A34;
+  --bg-secondary-400: #db3a34;
   --bg-dark-700: #424874;
   --bg-dark-800: #333333;
 
@@ -66,7 +66,7 @@ body {
 }
 
 .container::before {
-  content: '';
+  content: "";
   z-index: 0;
   display: block;
   width: 100vw;
@@ -74,6 +74,11 @@ body {
   position: relative;
   top: -3rem;
   box-shadow: 0px 0px 10px #000;
+}
+
+.v-center {
+  top: 50%;
+  translate: 0%, -50%;
 }
 
 @media (min-width: 47rem) {
@@ -105,10 +110,14 @@ body {
   }
 }
 
-@media (max-width: 47rem) {  
+@media (max-width: 47rem) {
   @keyframes change-icon-position {
-    0% {transform: translateX(0%);}
-    100% {transform: translateX(-200%);}
+    0% {
+      transform: translateX(0%);
+    }
+    100% {
+      transform: translateX(-200%);
+    }
   }
 
   @keyframes show-icons {
@@ -120,5 +129,3 @@ body {
     }
   }
 }
-
-
