@@ -2,6 +2,7 @@ import Image from "next/image";
 import LogoImg from "../../icon.png";
 
 import styles from "./navbar.module.css";
+import Link from "next/link";
 
 export default function NavBar() {
   return (
@@ -13,10 +14,18 @@ export default function NavBar() {
         </div>
       </div>
       <ul className={styles["right"]}>
-        <li>Pricing</li>
-        <li>Faq</li>
-        <li>Contact Us</li>
-        <li>Start a Repair</li>
+        <li>
+          <Link href={"/"}>Prix</Link>
+        </li>
+        <li>
+          <Link href={"/"}>Faq</Link>
+        </li>
+        <li>
+          <Link href={"/"}>Nous Contacter</Link>
+        </li>
+        <li>
+          <Link href={"/"}>Commencer à réparer</Link>
+        </li>
         <li>[lang]</li>
       </ul>
     </nav>
