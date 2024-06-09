@@ -1,13 +1,4 @@
-:root {
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-  }
-}
-
 * {
-  box-sizing: border-box;
   padding: 0;
   margin: 0;
 }
@@ -19,5 +10,64 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
+}
+
+@property --pos1 {
+  syntax: "<percentage>";
+  initial-value: 0%;
+  inherits: false;
+}
+
+@property --pos2 {
+  syntax: "<percentage>";
+  initial-value: 0%;
+  inherits: false;
+}
+
+.hover-effect {
+  background-image: radial-gradient(
+    circle,
+    var(--c1) var(--pos1),
+    var(--c2) var(--pos2)
+  );
+
+  transition: --pos1 250ms ease-out, --pos2 250ms ease-out;
+}
+
+.hover-effect:hover,
+.hover-effect:focus {
+  outline: none;
+  cursor: pointer;
+  --pos1: 100%;
+  --pos2: 100%;
+}
+
+.button {
+  --background-color: #0a66c2;
+  margin: 10px 0px;
+
+  align-items: center;
+  background-color: var(--background-color);
+  border: 5px solid var(--background-color);
+  border-radius: 100px;
+  max-width: 300px;
+  min-width: 0px;
+  color: #ffffff;
+  cursor: pointer;
+  font-weight: 600;
+  justify-content: center;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+
+  --c2: var(--background-color);
+  --c1: #16437e;
+}
+
+.button:disabled {
+  cursor: not-allowed;
+  background: rgba(0, 0, 0, 0.08);
+  color: rgba(0, 0, 0, 0.3);
 }
 
