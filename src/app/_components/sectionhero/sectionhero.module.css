@@ -1,4 +1,13 @@
 .section-hero {
+  background-image: linear-gradient(
+    to bottom right,
+    hsl(var(--primary-light)),
+    hsl(var(--primary-dark))
+  );
+  width: 100%;
+}
+
+.container {
   width: 80%;
   margin: 15% 10%;
   display: flex;
