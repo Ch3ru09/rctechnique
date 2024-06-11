@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Lilita+One&display=swap");
+
 :root {
   /* in hsl */
   --primary-dark: 214, 70%, 29%;
@@ -19,6 +21,11 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
+}
+
+body {
+  background-color: #eee;
+  font-family: "Lilita One", sans-serif;
 }
 
 @property --pos1 {
@@ -52,10 +59,10 @@ body {
 }
 
 .button {
-  margin: 10px 0px;
+  margin: 20px;
 
   align-items: center;
-  background-color: hsla(var(--accent), 0.5);
+  background-color: hsla(var(--primary-dark), 0.3);
   border: 5px solid hsl(var(--accent));
   border-radius: 100px;
   max-width: 300px;
@@ -69,7 +76,7 @@ body {
   text-decoration: none;
   display: inline-block;
 
-  --c2: hsla(var(--accent), 0.5);
+  --c2: hsla(var(--primary-dark), 0.3);
   --c1: hsl(var(--accent));
 }
 

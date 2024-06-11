@@ -1,0 +1,23 @@
+.intro {
+  display: flex;
+  flex-direction: column;
+
+  background-image: linear-gradient(
+    to bottom right,
+    hsl(var(--primary-light)),
+    hsl(var(--primary-dark))
+  );
+
+  --mask: radial-gradient(
+        11.18vh at 50% calc(100% - 15vh),
+        #000 99%,
+        #0000 101%
+      )
+      calc(50% - 10vh) 0/20vh 100%,
+    radial-gradient(11.18vh at 50% calc(100% + 10vh), #0000 99%, #000 101%) 50%
+      calc(100% - 5vh) / 20vh 100% repeat-x;
+  -webkit-mask: var(--mask);
+  mask: var(--mask);
+  border: none;
+  outline: none;
+}
