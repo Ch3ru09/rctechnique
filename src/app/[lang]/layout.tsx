@@ -1,22 +1,34 @@
 import type { Metadata } from "next";
+import { NextIntlClientProvider } from "next-intl";
+import {routing} from '@/i18n/routing';
+import {notFound} from 'next/navigation';
+import { getMessages } from "next-intl/server";
+
 import Footer from "./layoutComponents/Footer";
 import Navbar from "./layoutComponents/Navbar";
 import "./globals.css";
 
-export default function RootLayout({
+export default async function RootLayout({
   children,
   params: { lang },
 }: LayoutProps) {
-  const handleChangeTheme = (e: MouseEvent) => {
-    e.preventDefault();
-  };
+  // Ensure that the incoming `locale` is valid
+  if (!routing.locales.includes(lang as any)) {
+    notFound();
+  }
+ 
+  // Providing all messages to the client
+  // side is the easiest way to get started
+  const messages = await getMessages();
 
   return (
     <html lang="en">
       <body className="">
-        <Navbar lang={lang} />
-        {children}
-        <Footer />
+        <NextIntlClientProvider messages={messages}>
+          <Navbar lang={lang} />
+              {children}
+          <Footer />
+        </NextIntlClientProvider>
       </body>
     </html>
   );

@@ -6,7 +6,7 @@ import LanguageSelect from "./LangSelect";
 
 export default function Navbar({ lang }: { lang: string }) {
   return (
-    <nav className="bg-green-100 duration-[250ms]">
+    <nav className="duration-[250ms]">
       <div className="container mx-auto px-4 py-5">
         <div className="flex justify-between items-center">
           <Logo lang={lang} />

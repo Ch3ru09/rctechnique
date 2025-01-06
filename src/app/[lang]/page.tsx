@@ -1,6 +1,4 @@
 import type { Metadata } from "next";
-import dynamic from "next/dynamic";
-import getDictionary from "./homeDictionnaries/getDictionary";
 
 import Services from "./homeSections/services/Services"
 import Intro from "./homeSections/intro/Intro"
@@ -12,14 +10,12 @@ export default async function HomePage({
 }: {
   params: { lang: string };
 }) {
-  const dict = await getDictionary(lang);
-
   return (
     <>
-      <Intro dict={dict.intro} />
-      <Services dict={dict.services} />
-      <Testimonials dict={dict.testimonials} />
-      <Contact dict={dict.contact} />
+      <Intro />
+      {/* <Services  />
+      <Testimonials  />
+      <Contact  /> */}
     </>
   );
 }
