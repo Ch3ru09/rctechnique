@@ -2,12 +2,10 @@ import type { Metadata } from "next";
 import dynamic from "next/dynamic";
 import getDictionary from "./homeDictionnaries/getDictionary";
 
-const Services = dynamic(() => import("./homeSections/services/Services"));
-const Testimonials = dynamic(
-  () => import("./homeSections/testimonials/Testimonials")
-);
-const Contact = dynamic(() => import("./homeSections/contact/Contact"));
-const Intro = dynamic(() => import("./homeSections/intro/Intro"));
+import Services from "./homeSections/services/Services"
+import Intro from "./homeSections/intro/Intro"
+import Testimonials from "./homeSections/testimonials/Testimonials"
+import Contact from "./homeSections/contact/Contact"
 
 export default async function HomePage({
   params: { lang },
