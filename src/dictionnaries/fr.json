@@ -1,57 +1,55 @@
 {
   "Homepage": {
     "intro": {
-    "title": "Réparations rapides et efficaces",
-    "description": "Nous savons qu'avoir une écran brisé ou une batterie qui ne fonctionne pas peut être frustrant, c'est pourquoi nous y avons fait notre mission de fournir un service de réparation de téléphone et d'ordinateur qui est fiable, efficace et abordable",
-    "button": "Nous contacter"
-  },
-  "services": {
-    "title": "Nos Principaux Services",
+      "title": "Réparations rapides et efficaces",
+      "info": "Nous savons qu'avoir une écran brisé ou une batterie qui ne fonctionne pas peut être frustrant, c'est pourquoi nous y avons fait notre mission de fournir un service de réparation de téléphone et d'ordinateur qui est fiable, efficace et abordable",
+      "button": "Nous contacter"
+    },
+    "services": {
+      "title": "Nos Principaux Services",
 
-    "services": [
-      {
-        "title": "Réparation de Téléphone",
-        "description": "Verre arrière brisé, pas de problème, on peut vous changer ça. Écran brisé? Pas de soucis! Batterie qui fuit? On peut vous le retourner comme si'l était neuf.",
-        "button": "Apprendre plus",
-        "image": "phone"
+      "services": [
+        {
+          "title": "Réparation de Téléphone",
+          "description": "Verre arrière brisé, pas de problème, on peut vous changer ça. Écran brisé? Pas de soucis! Batterie qui fuit? On peut vous le retourner comme si'l était neuf.",
+          "button": "Apprendre plus",
+          "image": "phone"
+        },
+        {
+          "title": "Remplacement d'écran",
+          "description": "Nous pouvons remplacer n'importe quel écran craqué ou endommagé, que ce soit un Iphone, un Huawei, ou toute autre compagnie ou modèle",
+          "button": "Apprendre plus",
+          "image": "computer"
+        },
+        {
+          "title": "Et plus encore...",
+          "description": "Nous ne nous limitons pas à ces deux services. Vous pouvez voir plus sur notre page \"services\". ",
+          "button": "Voir tous les services",
+          "image": "ram"
+        }
+      ]
+    },
+    "testimonials": {
+      "title": "Témoignages",
+      "subtitle": "Ce que nos clients pensent",
+      "t1": {
+        "name": "laurent GEMIGNANI",
+        "description": "Vraiment très efficace et sympathique en plus ! Je le recommande"
       },
-      {
-        "title": "Remplacement d'écran",
-        "description": "Nous pouvons remplacer n'importe quel écran craqué ou endommagé, que ce soit un Iphone, un Huawei, ou toute autre compagnie ou modèle",
-        "button": "Apprendre plus",
-        "image": "computer"
+      "t2": {
+        "name": "马世全",
+        "description": "Super bon service, Super bonne technologie"
       },
-      {
-        "title": "Et plus encore...",
-        "description": "Nous ne nous limitons pas à ces deux services. Vous pouvez voir plus sur notre page \"services\". ",
-        "button": "Voir tous les services",
-        "image": "ram"
+      "t3": {
+        "name": "zongmin pang2022",
+        "description": "Bonne technique, bon service, magnifique prix"
       }
-    ]
-  },
-  "testimonials": {
-    "title": "Témoignages",
-    "subtitle": "Ce que nos clients pensent",
-    "t1": {
-      "name": "laurent GEMIGNANI",
-      "description": "Vraiment très efficace et sympathique en plus ! Je le recommande"
     },
-    "t2": {
-      "name": "马世全",
-      "description": "Super bon service, Super bonne technologie"
-    },
-    "t3": {
-      "name": "zongmin pang2022",
-      "description": "Bonne technique, bon service, magnifique prix"
+    "contact": {
+      "title": "Nous Contacter",
+      "email": "Courriel",
+      "address": "Adresse",
+      "phone": "Téléphone"
     }
-  },
-  "contact": {
-    "title": "Nous Contacter",
-    "email": "Courriel",
-    "address": "Adresse",
-    "phone": "Téléphone"
   }
-  }
-  
 }
-

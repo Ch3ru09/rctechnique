@@ -1,7 +1,6 @@
 import Link from "next/link";
-import type { Dict } from "../../homeDictionnaries/getDictionary";
 
-export default function SectionContact({ dict }: { dict: Dict["contact"] }) {
+export default function SectionContact() {
   return (
     <section className="w-full py-20 bg-gray-100">
       <div className="mx-auto w-3/5">

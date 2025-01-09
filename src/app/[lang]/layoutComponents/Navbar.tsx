@@ -6,10 +6,10 @@ import LanguageSelect from "./LangSelect";
 
 export default function Navbar({ lang }: { lang: string }) {
   return (
-    <nav className="duration-[250ms]">
+    <nav className="duration-[250ms] shadow-lg">
       <div className="container mx-auto px-4 py-5">
         <div className="flex justify-between items-center">
-          <Logo lang={lang} />
+          <span className="text-xl">RC Technique</span>
           <ul className="flex space-x-4">
             <li>
               <Link href={`/${lang}/`} className="text-gray-800 filter hover:text-blue-500 hover:drop-shadow-lg focus:text-blue-500" tabIndex={0}>

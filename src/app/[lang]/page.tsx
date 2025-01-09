@@ -1,9 +1,10 @@
 import type { Metadata } from "next";
 
-import Services from "./homeSections/services/Services"
-import Intro from "./homeSections/intro/Intro"
-import Testimonials from "./homeSections/testimonials/Testimonials"
-import Contact from "./homeSections/contact/Contact"
+import Intro from "./homeSections/intro/Intro";
+import Info from "./homeSections/info/Info";
+import Services from "./homeSections/services/Services";
+import Testimonials from "./homeSections/testimonials/Testimonials";
+import Contact from "./homeSections/contact/Contact";
 
 export default async function HomePage({
   params: { lang },
@@ -13,9 +14,12 @@ export default async function HomePage({
   return (
     <>
       <Intro />
-      {/* <Services  />
+      <Info />
+      {
+        /* <Services  />
       <Testimonials  />
-      <Contact  /> */}
+      <Contact  /> */
+      }
     </>
   );
 }
@@ -25,4 +29,3 @@ export const metadata: Metadata = {
   description:
     "We provide phone and computer repair services that are reliable, efficient, and affordable.",
 };
-
