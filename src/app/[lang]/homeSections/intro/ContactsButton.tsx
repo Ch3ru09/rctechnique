@@ -17,7 +17,7 @@ export default function ContactsButton({ children }: { children: string }) {
           behavior: "smooth",
         });
       }}
-      className="inline-block border-4 border-gray-900 text-gray-900 font-bold py-4 px-8 mt-15 rounded-full transition-colors duration-300">
+      className="inline-block border-4 border-gray-900 text-gray-900 font-bold py-4 px-8 mt-15 rounded-full transition-colors duration-300 w-1/3">
       {children}
     </button>
   );
