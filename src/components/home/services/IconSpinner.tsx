@@ -18,7 +18,8 @@ export default function IconSpinner({
 
   return (
     <div className="grid place-items-center relative my-64 transition-all w-1/4 duration-1000">
-      <span className="absolute border-solid border-2 border-gray-500 w-80 h-80 rounded-full"></span>
+      <span className="absolute border-solid border-2 border-gray-500 w-80 h-80 rounded-full">
+      </span>
 
       <Image
         src={RepairImage}
@@ -28,9 +29,7 @@ export default function IconSpinner({
       />
 
       <ul
-        className={
-          "absolute w-auto h-20 aspect-square origin-center transition-all duration-1000 rotate-0"
-        }
+        className={"absolute w-auto h-20 aspect-square origin-center transition-all duration-1000 rotate-0"}
         style={{
           rotate: `${(currentIconIndex * 360) / icons.length}deg`,
         }}
@@ -44,7 +43,8 @@ export default function IconSpinner({
               onClick={() => {
                 setCurrentIconIndex(
                   (r) =>
-                    r + ((icons.length - (r % icons.length) + i) % icons.length)
+                    r +
+                    ((icons.length - (r % icons.length) + i) % icons.length),
                 );
               }}
             >
@@ -79,4 +79,3 @@ type IconSpinnerProps = {
   currentIconIndex: number;
   setCurrentIconIndex: Dispatch<SetStateAction<number>>;
 };
-

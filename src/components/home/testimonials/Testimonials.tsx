@@ -90,4 +90,3 @@ type CardProps = {
   };
   dict: any;
 };
-

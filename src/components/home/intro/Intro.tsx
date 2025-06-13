@@ -1,6 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
-import type { Dict } from "../../homeDictionnaries/getDictionary";
+import type { Dict } from "../dictionaries/getDictionary";
 
 import LogoImage from "../../assets/logo.png";
 import ContactsButton from "./ContactsButton";
@@ -26,4 +26,3 @@ export default function SectionIntro({ dict }: { dict: Dict["intro"] }) {
     </div>
   );
 }
-

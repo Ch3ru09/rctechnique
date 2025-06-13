@@ -12,17 +12,27 @@ export default function Navbar({ lang }: { lang: string }) {
           <Logo lang={lang} />
           <ul className="flex space-x-4">
             <li>
-              <Link href={`/${lang}/`} className="text-gray-800 filter hover:text-blue-500 hover:drop-shadow-lg focus:text-blue-500" tabIndex={0}>
+              <Link
+                href={`/${lang}/`}
+                className="text-gray-800 filter hover:text-blue-500 hover:drop-shadow-lg focus:text-blue-500"
+                tabIndex={0}
+              >
                 Home
               </Link>
             </li>
-            {/* <li>
+            {
+              /* <li>
               <Link href={`/${lang}/services`} className="text-gray-800 filter hover:text-blue-500 hover:drop-shadow-lg focus:text-blue-500 focus:drop-shadow-lg" tabIndex={0}>
                 Services
               </Link>
-            </li> */}
+            </li> */
+            }
             <li>
-              <Link href={`/${lang}/faq`} className="text-gray-800 filter hover:text-blue-500 hover:drop-shadow-lg focus:text-blue-500 focus:drop-shadow-lg" tabIndex={0}>
+              <Link
+                href={`/${lang}/faq`}
+                className="text-gray-800 filter hover:text-blue-500 hover:drop-shadow-lg focus:text-blue-500 focus:drop-shadow-lg"
+                tabIndex={0}
+              >
                 FAQ
               </Link>
             </li>

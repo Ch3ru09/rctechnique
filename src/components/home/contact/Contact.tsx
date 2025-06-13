@@ -50,11 +50,11 @@ export default function SectionContact({ dict }: { dict: Dict["contact"] }) {
               src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2445.3699802024666!2d-73.4746668337793!3d45.444129211241844!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4cc90fbe5cc265cd%3A0x942c99d5cd89daca!2sRCtechnique!5e0!3m2!1sen!2sca!4v1684268224603!5m2!1sen!2sca"
               loading="lazy"
               referrerPolicy="no-referrer-when-downgrade"
-            ></iframe>
+            >
+            </iframe>
           </div>
         </div>
       </div>
     </section>
   );
 }
-

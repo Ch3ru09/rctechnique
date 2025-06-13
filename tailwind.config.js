@@ -18,7 +18,8 @@ module.exports = {
           "linear-gradient(to bottom, #eee5, #000f), url('/repairs/cracked-back.jpg')",
         frontglass:
           "linear-gradient(to bottom, #eee5, #000f), url('/repairs/cracked-front.jpg')",
-        ram: "linear-gradient(to bottom, #eee5, #000f), url('/repairs/ram.jpg')",
+        ram:
+          "linear-gradient(to bottom, #eee5, #000f), url('/repairs/ram.jpg')",
       },
       screens: {
         "2xs": "340px",
@@ -68,4 +69,3 @@ module.exports = {
   },
   plugins: [],
 };
-

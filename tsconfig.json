@@ -26,6 +26,9 @@
     "paths": {
       "@/*": [
         "./src/*"
+      ],
+      "@components/*": [
+        "./src/components/*"
       ]
     }
   },
@@ -35,7 +38,7 @@
     "**/*.tsx",
     ".next/types/**/*.ts",
     "src/middleware.js",
-    "src/app/[lang]/homeDictionnaries/getDictionary.ts"
+    "src/components/home/dictionaries/getDictionary.ts"
   ],
   "exclude": [
     "node_modules"

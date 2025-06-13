@@ -29,7 +29,9 @@ export default function Logo({ lang }: { lang: string }) {
       ref={ref}
       width={50}
       height={50}
-      onClick={() => {router.push("/")}}
+      onClick={() => {
+        router.push("/");
+      }}
     />
   );
 }
@@ -37,4 +39,3 @@ export default function Logo({ lang }: { lang: string }) {
 function getNoLocaleURL(location: string) {
   return location.replace(/^(?:[^\/]*\/){2}\s*/, "/");
 }
-

@@ -12,7 +12,6 @@ const services = [
     id: 2,
     title: "Screen Repair",
     description: "Fix cracked or damaged screens",
-    
   },
   {
     id: 3,
@@ -36,7 +35,8 @@ export default function ServicesPage() {
             className="bg-gray-50 shadow-lg rounded-lg p-6"
             style={{ backgroundImage: `url("/reparis/${service.img}.jpg")}` }}
             key={service.id}
-            id={service.id.toString()}>
+            id={service.id.toString()}
+          >
             <h3 className="text-xl font-bold mb-2">{service.title}</h3>
             <p className="text-gray-700 leading-relaxed mb-4">
               {service.description}

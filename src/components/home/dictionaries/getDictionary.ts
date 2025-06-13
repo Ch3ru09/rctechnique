@@ -1,7 +1,7 @@
 import en from "./en.json";
-export type Dict = typeof en
+export type Dict = typeof en;
 
-const dictionaries: {[x: string]: () => Promise<Dict>} = {
+const dictionaries: { [x: string]: () => Promise<Dict> } = {
   en: () => import("./en.json").then((module) => module.default),
   fr: () => import("./fr.json").then((module) => module.default),
 };

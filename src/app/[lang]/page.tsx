@@ -1,13 +1,13 @@
 import type { Metadata } from "next";
 import dynamic from "next/dynamic";
-import getDictionary from "./homeDictionnaries/getDictionary";
+import getDictionary from "../../components/home/dictionaries/getDictionary";
 
-const Services = dynamic(() => import("./homeSections/services/Services"));
+const Services = dynamic(() => import("@components/home/services/Services"));
 const Testimonials = dynamic(
-  () => import("./homeSections/testimonials/Testimonials")
+  () => import("@components/home/testimonials/Testimonials"),
 );
-const Contact = dynamic(() => import("./homeSections/contact/Contact"));
-const Intro = dynamic(() => import("./homeSections/intro/Intro"));
+const Contact = dynamic(() => import("@components/home/contact/Contact"));
+const Intro = dynamic(() => import("@components/home/intro/Intro"));
 
 export default async function HomePage({
   params: { lang },
@@ -31,4 +31,3 @@ export const metadata: Metadata = {
   description:
     "We provide phone and computer repair services that are reliable, efficient, and affordable.",
 };
-
