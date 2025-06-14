@@ -1,5 +1,5 @@
 import Image, { type StaticImageData } from "next/image";
-import type { Dict } from "../../homeDictionnaries/getDictionary";
+import type { Dict } from "../dictionaries/getDictionary";
 
 import P1 from "./icons/1.png";
 import P2 from "./icons/2.png";

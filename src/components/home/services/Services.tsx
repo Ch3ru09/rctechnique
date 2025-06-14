@@ -1,6 +1,7 @@
 "use client";
 
-import type { Dict } from "../../homeDictionnaries/getDictionary";
+import { CSSProperties } from "react";
+import type { Dict } from "../dictionaries/getDictionary";
 
 export default function SectionServices({ dict }: { dict: Dict["services"] }) {
   const services = [
@@ -11,8 +12,9 @@ export default function SectionServices({ dict }: { dict: Dict["services"] }) {
     "speakers",
     "water",
     "computersoftware",
+    "computerhardware",
     "computerslow",
-  ];
+  ] as const;
 
   return (
     <section className="bg-gray-100 pb-16 pt-32 grid">
@@ -20,10 +22,16 @@ export default function SectionServices({ dict }: { dict: Dict["services"] }) {
         {dict.title}
       </h2>
       <div className="grid w-3/5 mx-auto gap-4 grid-cols-[repeat(auto-fit,_minmax(200px,_1fr))]">
-        {services.map((x) => {
+        {services.map((x, i) => {
           return (
-            <div className="bg-green-200 rounded-3xl m-5 p-5 aspect-square h-auto">
-              {x}
+            <div
+              key={i}
+              style={{
+                "--image-url": `url(/repairs/${x}.jpg)`,
+              } as CSSProperties}
+              className="bg-transparent relative shadow-md overflow-hidden rounded-3xl m-5 p-5 aspect-square h-auto z-10 after:absolute after:-z-10 after:content-[''] after:bg-[image:var(--image-url)] after:bg-cover after:bg-center after:w-full after:h-full after:left-0 after:top-0 after:opacity-40"
+            >
+              <h2>{dict.services[x].title}</h2>
             </div>
           );
         })}

@@ -8,28 +8,53 @@
     "button": "Nous contacter"
   },
   "services": {
-    "title": "Nos Principaux Services",
-
-    "services": [
-      {
-        "title": "Réparation de Téléphone",
-        "description": "Verre arrière brisé, pas de problème, on peut vous changer ça. Écran brisé? Pas de soucis! Batterie qui fuit? On peut vous le retourner comme si'l était neuf.",
-        "button": "Apprendre plus",
-        "image": "phone"
+    "title": "Commencer une réparation",
+    "services": {
+      "backglass": {
+        "title": "Verre arrière",
+        "description": "Verre arrière brisé, pas de problème, on peut vous changer ça.",
+        "button": "Apprendre plus"
       },
-      {
-        "title": "Remplacement d'écran",
-        "description": "Nous pouvons remplacer n'importe quel écran craqué ou endommagé, que ce soit un Iphone, un Huawei, ou toute autre compagnie ou modèle",
-        "button": "Apprendre plus",
-        "image": "computer"
+      "frontscreen": {
+        "title": "Écran Avant",
+        "description": "",
+        "button": "Apprendre plus"
       },
-      {
-        "title": "Et plus encore...",
-        "description": "Nous ne nous limitons pas à ces deux services. Vous pouvez voir plus sur notre page \"services\". ",
-        "button": "Voir tous les services",
-        "image": "ram"
+      "charging": {
+        "title": "Port de Recharge",
+        "description": "",
+        "button": "Apprendre plus"
+      },
+      "battery": {
+        "title": "Batterie",
+        "button": "Apprendre plus"
+      },
+      "speakers": {
+        "title": "Haut Parleurs",
+        "description": "",
+        "button": "Apprendre plus"
+      },
+      "water": {
+        "title": "Dégâts d'eau",
+        "description": "",
+        "button": "Apprendre plus"
+      },
+      "computersoftware": {
+        "title": "Système d'ordinateur",
+        "description": "",
+        "button": "Apprendre plus"
+      },
+      "computerhardware": {
+        "title": "Pièces d'ordinateur",
+        "description": "",
+        "button": "Apprendre plus"
+      },
+      "computerslow": {
+        "title": "Ordinateur lent",
+        "description": "",
+        "button": "Apprendre plus"
       }
-    ]
+    }
   },
   "testimonials": {
     "title": "Témoignages",

@@ -8,27 +8,53 @@
     "button": "Get in touch"
   },
   "services": {
-    "title": "Our Main Services",
-    "services": [
-      {
-        "title": "Phone Repair",
-        "description": "A cracked back glass, no problem, we can change that. Broken screen? No problem! Leaking battery? We'll make it brand new",
-        "button": "Learn more",
-        "image": "phone"
+    "title": "Start Your Repair",
+    "services": {
+      "backglass": {
+        "title": "Backglass Repair",
+        "description": "Verre arrière brisé, pas de problème, on peut vous changer ça.",
+        "button": "Apprendre plus"
       },
-      {
-        "title": "Computer Repair",
-        "description": "Fan not spinning? Software issues? We can fix that",
-        "button": "Learn more",
-        "image": "frontglass"
+      "frontscreen": {
+        "title": "Front Screen Repair",
+        "description": "",
+        "button": "Apprendre plus"
       },
-      {
-        "title": "And Much More...",
-        "description": "We do not limit ourselves to these 2 services. See more on our services page to see more.",
-        "button": "See all services",
-        "image": "ram"
+      "charging": {
+        "title": "Charging Port",
+        "description": "",
+        "button": "Apprendre plus"
+      },
+      "battery": {
+        "title": "Battery",
+        "button": "Apprendre plus"
+      },
+      "speakers": {
+        "title": "Speakers",
+        "description": "",
+        "button": "Apprendre plus"
+      },
+      "water": {
+        "title": "Water Damage",
+        "description": "",
+        "button": "Apprendre plus"
+      },
+      "computersoftware": {
+        "title": "Computer Software",
+        "description": "",
+        "button": "Apprendre plus"
+      },
+      "computerhardware": {
+        "title": "Computer Hardware",
+        "description": "",
+        "button": "Apprendre plus"
+      },
+      "computerslow": {
+        "title": "Computer Slow",
+        "description": "",
+        "button": "Apprendre plus"
       }
-    ]
+    }
   },
   "testimonials": {
     "title": "Testimonials",
