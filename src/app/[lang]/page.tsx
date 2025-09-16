@@ -1,13 +1,13 @@
 import type { Metadata } from "next";
 import dynamic from "next/dynamic";
-import getDictionary from "../../components/home/dictionaries/getDictionary";
+import getDictionary from "@/components/home/dictionaries/getDictionary";
 
-const Services = dynamic(() => import("@components/home/services/Services"));
+const Services = dynamic(() => import("@/components/home/services/Services"));
 const Testimonials = dynamic(
-  () => import("@components/home/testimonials/Testimonials")
+  () => import("@/components/home/testimonials/Testimonials")
 );
-const Contact = dynamic(() => import("@components/home/contact/Contact"));
-const Intro = dynamic(() => import("@components/home/intro/Intro"));
+const Contact = dynamic(() => import("@/components/home/contact/Contact"));
+const Intro = dynamic(() => import("@/components/home/intro/Intro"));
 
 export default async function HomePage({
   params,

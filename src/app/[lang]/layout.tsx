@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
-import Footer from "../../components/layout/Footer";
-import Navbar from "../../components/layout/Navbar";
-import "@components/layout/globals.css";
+import "@/components/layout/globals.css";
+import Navbar from "@/components/layout/Navbar";
+import Footer from "@/components/layout/Footer";
 
 export default async function RootLayout({ children, params }: LayoutProps) {
   const { lang } = await params;
