@@ -3,10 +3,8 @@ import Footer from "../../components/layout/Footer";
 import Navbar from "../../components/layout/Navbar";
 import "@components/layout/globals.css";
 
-export default function RootLayout({
-  children,
-  params: { lang },
-}: LayoutProps) {
+export default async function RootLayout({ children, params }: LayoutProps) {
+  const { lang } = await params;
   const handleChangeTheme = (e: MouseEvent) => {
     e.preventDefault();
   };
@@ -41,5 +39,6 @@ export const metadata: Metadata = {
 
 type LayoutProps = {
   children: React.ReactNode;
-  params: { lang: string };
+  params: Promise<{ lang: string }>;
 };
+

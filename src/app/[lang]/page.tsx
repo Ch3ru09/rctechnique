@@ -4,16 +4,17 @@ import getDictionary from "../../components/home/dictionaries/getDictionary";
 
 const Services = dynamic(() => import("@components/home/services/Services"));
 const Testimonials = dynamic(
-  () => import("@components/home/testimonials/Testimonials"),
+  () => import("@components/home/testimonials/Testimonials")
 );
 const Contact = dynamic(() => import("@components/home/contact/Contact"));
 const Intro = dynamic(() => import("@components/home/intro/Intro"));
 
 export default async function HomePage({
-  params: { lang },
+  params,
 }: {
-  params: { lang: string };
+  params: Promise<{ lang: string }>;
 }) {
+  const { lang } = await params;
   const dict = await getDictionary(lang);
 
   return (
@@ -31,3 +32,4 @@ export const metadata: Metadata = {
   description:
     "We provide phone and computer repair services that are reliable, efficient, and affordable.",
 };
+

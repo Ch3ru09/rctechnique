@@ -2,9 +2,12 @@ import type { Metadata } from "next";
 import Dropdown from "../../../components/faq/Dropdown";
 import getDictionary from "../../../components/faq/faqDictionnaries/getDictionary";
 
-export default async function FAQPage(
-  { params: { lang } }: { params: { lang: string } },
-) {
+export default async function FAQPage({
+  params,
+}: {
+  params: Promise<{ lang: string }>;
+}) {
+  const { lang } = await params;
   const dict = await getDictionary(lang);
 
   return (
@@ -28,3 +31,4 @@ export const metadata: Metadata = {
   description:
     "We provide phone and computer repair services that are reliable, efficient, and affordable.",
 };
+

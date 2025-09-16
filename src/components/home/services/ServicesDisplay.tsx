@@ -1,5 +1,5 @@
-import { Dict } from "../../homeDictionnaries/getDictionary";
-import InfoPage from "./pages/InfoPage";
+import { Dict } from "../dictionaries/getDictionary";
+// import InfoPage from "./pages/InfoPage";
 
 export default function ServicesDisplay({
   currentIconIndex,
@@ -9,7 +9,7 @@ export default function ServicesDisplay({
 
   return (
     <div className="h-1/2 ml-[20%] my-auto relative w-[50%]">
-      {<InfoPage dictionnary={dictionnary[currentIconIndex % pages.length]} />}
+      {/* {<InfoPage dictionnary={dictionnary[currentIconIndex % pages.length]} />} */}
     </div>
   );
 }
@@ -44,3 +44,4 @@ type ServicesDisplayProps = {
     );
   })}
 </div> */
+
